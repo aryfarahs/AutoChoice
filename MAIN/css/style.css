@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    border: 1px dashed red;
 }
 
 :root {
@@ -28,7 +29,6 @@ header > img {
 }
 
 .container {
-    position: relative;
     min-height: 80vh;
 }
 
@@ -53,6 +53,10 @@ header > img {
     width: 100%;
     box-shadow: 1px 1px 2px 1px darkgray inset;
 
+}
+
+.txt:focus-visible {
+    outline: none;
 }
 
 
@@ -86,7 +90,7 @@ header > img {
     margin: 5px 10px;
 }
 .arrow:hover {
-    margin-left: 12px;
+    margin-left: 13px;
     cursor: pointer;
 }
 
@@ -97,11 +101,13 @@ header > img {
     height: 400px;
     width: 6px;
     margin-top: 10px;
+    left: 0%;
 
 }
 
 .catalog {
-    display: block;
+    position: relative;
+    display: flex;
     max-width: 640px;
     justify-content: space-around;
     margin: auto;
