@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/javascript.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <title>AutoChoice</title>
 </head>
@@ -38,9 +39,13 @@
             </section>  
         </section> 
         
-        <div class="personal">
-            <img src="../images/arrowright.png" class="arrow" onclick="pageProfile()">
-        </div> 
+        <div class="personal" id="personalPage">
+            <img src="../images/arrowright.png" class="arrowOpen" onclick="openPopUp()"> 
+        </div>
+        <div class="overlay" id="overlay">
+            <img src="../images/arrowright.png" class="arrowClose" onclick="closePopUp()">
+        </div>
+        
         
         
     </main>
