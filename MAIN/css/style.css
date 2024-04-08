@@ -11,7 +11,7 @@
 }
 
 html, body {
-    min-height: 120vh;
+    min-height: 10vh;
     background-color: var(--branquin);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -32,6 +32,7 @@ header > img {
 }
 
 .forml {
+    display: flex;
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -97,16 +98,25 @@ header > img {
     margin: 10px;
 }
 
-.arrowOpen:hover,.arrowClose {
+.arrowOpen:hover {
     margin-left: 13px;
     cursor: pointer;
 }
 
+.arrowClose:hover {
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.arrowClose:hover + .geral {
+    margin: 10px 3px;
+}
+
 .personal {
-    display: block;
+    display: flex;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0px 1px 5px 1px darkgray;
-    height: 500px;
+    height: 600px;
     width: 6px;
     margin-top: 10px;
     left: 0%;
@@ -117,9 +127,9 @@ header > img {
     display: none;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0px 1px 5px 1px darkgray;
-    height: 500px;
+    height: 600px;
     min-width: 300px;
-    width: 40vw;
+    width: 30vw;
     margin-top: 10px;
     left: 0%;
 
@@ -134,7 +144,7 @@ header > img {
 }
 
 .card {
-    display: inline-block;
+    display: inline-flex;
     border: 1px dashed var(--amarelo);
     border-radius: 10px;
     min-width: 120px;
@@ -148,4 +158,66 @@ header > img {
 .line {
     width: 100%;
     justify-content: space-evenly;
+}
+
+
+.geral {
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    max-width: 255px;
+}
+
+.pageFunc {
+    margin: 30px 0px;
+    min-width: 220px;
+    width: 24vw;
+}
+
+.pageFunc > img {
+    width: 4vw;
+    max-width: 25px;
+    margin: 4px;
+}
+
+.pageFunc > a {
+    color: black;
+    text-decoration: none;
+}
+
+.pageFunc > a:hover {
+    text-decoration: underline;    
+}
+
+.config {
+    margin: 370px 0px;
+    min-width: 220px;
+    width: 24vw;
+}
+
+.config > img {
+    width: 4vw;
+    max-width: 25px;
+    margin: 4px;
+}
+
+.config > a {
+    color: black;
+    text-decoration: none;
+}
+
+.config > a:hover {
+    text-decoration: underline;    
+}
+
+
+footer {
+    margin-top: 5%;
+    color: var(--branquin);
+}
+
+footer > h5 {
+    background-color: var(--cinza-escuro);
+    text-align: center;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
 }
