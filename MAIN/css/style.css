@@ -27,6 +27,18 @@ header > img {
     width: 15%;
 }
 
+.TEMPORARY {
+    width: fit-content;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.TEMPORARY:hover {
+    cursor: pointer;
+    color: lightgray;
+}
+
 .container {
     min-height: 80vh;
 }
@@ -52,7 +64,8 @@ header > img {
     border-radius: 10px 0px 0px 10px;
     width: 100%;
     box-shadow: 1px 1px 3px 0.5px lightgray inset;
-
+    z-index: 1px;
+    position: relative;
 }
 
 .txt:focus-visible {
@@ -118,21 +131,22 @@ header > img {
     box-shadow: 0px 1px 5px 1px darkgray;
     height: 600px;
     width: 6px;
-    margin-top: 10px;
+    margin-top: -480px;
     left: 0%;
-
 }
 
 .overlay {
     display: none;
+    position: absolute;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0px 1px 5px 1px darkgray;
     height: 600px;
     min-width: 300px;
     width: 30vw;
-    margin-top: 10px;
+    margin-top: -480px;
     left: 0%;
-
+    background-color: var(--branquin);
+    transition: margin 0.2s ease;
 }
 
 .catalog {
@@ -159,7 +173,6 @@ header > img {
     width: 100%;
     justify-content: space-evenly;
 }
-
 
 .geral {
     margin: 10px 0px 0px 0px;
@@ -211,7 +224,6 @@ header > img {
 
 
 footer {
-    margin-top: 5%;
     color: var(--branquin);
 }
 
