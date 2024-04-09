@@ -129,7 +129,7 @@ header > img {
     display: flex;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0px 1px 5px 1px darkgray;
-    height: 600px;
+    height: 500px;
     width: 6px;
     margin-top: -480px;
     left: 0%;
@@ -140,9 +140,9 @@ header > img {
     position: absolute;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 0px 1px 5px 1px darkgray;
-    height: 600px;
-    min-width: 300px;
-    width: 30vw;
+    height: 500px;
+    min-width: 250px;
+    width: 25vw;
     margin-top: -480px;
     left: 0%;
     background-color: var(--branquin);
@@ -185,43 +185,46 @@ header > img {
     min-width: 220px;
     width: 24vw;
 }
-
-.pageFunc > img {
-    width: 4vw;
-    max-width: 25px;
-    margin: 4px;
-}
-
-.pageFunc > a {
-    color: black;
-    text-decoration: none;
-}
-
-.pageFunc > a:hover {
-    text-decoration: underline;    
-}
-
 .config {
-    margin: 370px 0px;
+    margin: 235px 0px;
     min-width: 220px;
     width: 24vw;
 }
 
-.config > img {
+.pageFunc > img, .config > img {
     width: 4vw;
     max-width: 25px;
     margin: 4px;
 }
 
-.config > a {
+.pageFunc > a, .config > a {
+    position: absolute;
     color: black;
     text-decoration: none;
 }
 
-.config > a:hover {
+.pageFunc > a:hover, .config > a:hover {
     text-decoration: underline;    
 }
 
+.info {
+    width: 50vw;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px 1px lightgray;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info > h2 {
+    color: var(--amarelo);
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 footer {
     color: var(--branquin);
