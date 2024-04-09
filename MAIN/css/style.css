@@ -225,6 +225,7 @@ header > img {
 
 footer {
     color: var(--branquin);
+    margin-top: 5%;
 }
 
 footer > h5 {
