@@ -51,8 +51,8 @@
                     <img src="../images/heart.png" "><a href="index.php" style="top: 135px">Favoritos</a><br> 
                 </div>
                 <div class="config">
-                    <img src="../images/settings.png"><a href="settings.php" style="bottom: 115px">Configurações</a><br>
-                    <img src="../images/info.png" "><a href="info.php" style="bottom: 75px">Info</a><br> 
+                    <img src="../images/settings.png"><a href="settings.php" style="bottom: 76px">Configurações</a><br>
+                    <img src="../images/info.png" "><a href="info.php" style="bottom: 40px">Info</a><br> 
                 </div>
             </div>
         </div>

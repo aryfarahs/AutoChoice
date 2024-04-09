@@ -12,12 +12,65 @@
         <img src="../images/wlogo.png" class="logo">
     </header>
     <main>
-        <h1 style="text-align: center; margin-top: 70px;">OPS!</h1>
-        <h2 style="text-align: center; margin-top: 10px;">Ainda estamos trabalhando aqui!</h2>
-        <h1 class="TEMPORARY" onclick="history.go(-1)" >&larr;</h1>
-    </main>
-    <footer>
+        <div class="containerProfile">
+            <div class="cabeca">
+                <img src="../images/profile.png" alt="">
+                <h1>Usuário XXX</h1>
+                <a href="settings.html"><img src="../images/settings.png" class="conf2"></a>
+            </div>
+            <div class="listas">
+                <div class="fav">
+                    <h3>Favoritos</h3>
+                    <div class="card2">
+                        <img src="../images/xclose.png" class="close">
+                    </div>
+                    <div class="card2">
 
+                    </div>
+                    <div class="card2">
+
+                    </div>
+                    <div class="card2">
+
+                    </div>
+                </div>
+                <div class="hist">
+                    <h3>Histórico</h3>
+                    <div class="card2">
+
+                    </div>
+                    <div class="card2">
+
+                    </div>
+                    <div class="card2">
+
+                    </div>
+                    <div class="card2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personal" id="personalPage">
+            <img src="../images/arrowright.png" class="arrowOpen" onclick="openPopUp()"> 
+        </div>
+        <div class="overlay" id="overlay">
+            <img src="../images/arrowleft.png" class="arrowClose" onclick="closePopUp()">
+            <div class="geral">
+                <div class="pageFunc">
+                    <img src="../images/profile1.png"><a href="profile.html" style="top: 60px">Perfil</a><br>
+                    <img src="../images/house.png" "><a href="index.html" style="top: 100px">Home</a><br>
+                    <img src="../images/heart.png" "><a href="index.html" style="top: 135px">Favoritos</a><br> 
+                </div>
+                <div class="config">
+                    <img src="../images/settings.png"><a href="settings.html" style="bottom: 76px">Configurações</a><br>
+                    <img src="../images/info.png" "><a href="info.html" style="bottom: 40px">Info</a><br> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <h5>Todos os diretos reservados - AutoChoice</h5>
     </footer>
 </body>
 </html>
