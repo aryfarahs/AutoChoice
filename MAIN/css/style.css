@@ -133,6 +133,7 @@ header > img {
     width: 6px;
     margin-top: -480px;
     left: 0%;
+    transition: width 0.3s ease;
 }
 
 .overlay {
@@ -146,7 +147,7 @@ header > img {
     margin-top: -480px;
     left: 0%;
     background-color: var(--branquin);
-    transition: margin 0.2s ease;
+    transition: width 0.3s ease;
 }
 
 .catalog {
