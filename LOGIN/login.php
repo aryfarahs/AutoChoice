@@ -10,24 +10,23 @@
     <img src="../MAIN/images/blogo.png" style="width: 12vw; min-width: 150px; margin: 10px; padding: 0;">
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="../MAIN/html/index.html">
+		<form action="../MAIN/html/index.html" method="POST">
 			<h1>Cadastre-se</h1>
 			<span>ou use o email para se cadastrar</span>
-			<input type="text" placeholder="Nome" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Senha" />
-			<button>Cadastrar</button>
+			<input type="text" name="nome" placeholder="Nome" />
+			<input type="email" name="email" placeholder="Email" />
+			<input type="password" name="senha" placeholder="Senha" />
+			<button type="submit" name="cadastrar">Cadastrar</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="../MAIN/html/index.html" method="POST">
-			
+		<form action="login.php" method="POST">
 			<h1>Login</h1>
 			<span>ou use sua conta</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Senha" />
+			<input type="email" name="email" placeholder="Email" />
+			<input type="password" name="senha" placeholder="Senha" />
 			<a href="#">Esqueceu sua senha?</a>
-			<button>Entrar</button>
+			<button type="submit" name="login">Entrar</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -47,18 +46,17 @@
 </div>
 </body>
 
-
- <script>
+<script>
     const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
- </script>
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
 </html>
