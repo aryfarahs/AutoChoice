@@ -26,7 +26,8 @@ if(isset($_POST['login'])) {
         if(password_verify($senha, $row['senha_hash'])) {
             // Senha correta, usuário autenticado com sucesso
             // Redireciona para a página index.html
-            header("index.html")
+            header("Location: ../MAIN/html/index.html");
+            echo "Logado";
             exit; // Garante que o código não continue a ser executado após o redirecionamento
         } else {
             // Senha incorreta

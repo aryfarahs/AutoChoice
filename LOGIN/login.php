@@ -23,7 +23,7 @@
 		<form action="login.php" method="POST">
 			<h1>Login</h1>
 			<span>ou use sua conta</span>
-			<input type="email" name="email" placeholder="Email" />
+			<input type="text" name="email" placeholder="Email" />
 			<input type="password" name="senha" placeholder="Senha" />
 			<a href="#">Esqueceu sua senha?</a>
 			<button type="submit" name="login">Entrar</button>
