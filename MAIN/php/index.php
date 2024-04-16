@@ -11,6 +11,7 @@
     <header>
         <img src="../images/wlogo.png" class="logo">
     </header>
+    
     <main>
         <form action="" class="forml">
             <input type="text" name="search" placeholder="O que deseja ver?" class="txt" id="forml">
@@ -47,12 +48,12 @@
             <div class="geral">
                 <div class="pageFunc">
                     <img src="../images/profile1.png"><a href="profile.php" style="top: 60px">Perfil</a><br>
-                    <img src="../images/house.png" "><a href="index.php" style="top: 100px">Home</a><br>
-                    <img src="../images/heart.png" "><a href="index.php" style="top: 135px">Favoritos</a><br> 
+                    <img src="../images/house.png" ><a href="index.php" style="top: 100px">Home</a><br>
+                    <img src="../images/heart.png" ><a href="index.php" style="top: 135px">Favoritos</a><br> 
                 </div>
                 <div class="config">
                     <img src="../images/settings.png"><a href="settings.php" style="bottom: 76px">Configurações</a><br>
-                    <img src="../images/info.png" "><a href="info.php" style="bottom: 40px">Info</a><br> 
+                    <img src="../images/info.png" ><a href="info.php" style="bottom: 40px">Info</a><br> 
                 </div>
             </div>
         </div>
