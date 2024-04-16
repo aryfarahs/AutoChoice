@@ -128,6 +128,8 @@
             flex-direction: row;
             flex-wrap: wrap;
             height: 100%;
+            max-width: 800px;
+            margin: auto;
         }
 
         .card {
@@ -200,15 +202,6 @@
 
             <button type="submit" class="search"><img src="images/lupa.png" class="lupa"></button>
         </form> 
-
-
-
-
-
-
-
-
-
 
 
     <?php
