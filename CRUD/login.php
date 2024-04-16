@@ -30,6 +30,8 @@
             echo 'Erro ao acessar o banco';
             require 'login-form.php';
         } else {
+
+
             $objAtual = $busca->fetch_object();
 
 

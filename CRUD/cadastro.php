@@ -45,16 +45,6 @@ require 'funcoes.php';
     }
 
 
-
-
-
-
-
-
-
-
-
-
 ?>
 
 

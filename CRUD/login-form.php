@@ -19,6 +19,7 @@
     </form>
 
     <h4><a href="cadastro-form.php">Não possui cadastro? Clique aqui!</a></h4>
+    <h4><a href="index.php">Voltar pra tela inicial</a></h4>
 
 
 </body>

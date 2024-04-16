@@ -19,7 +19,9 @@
 
         <input type="submit" value="Enviar">
     </form>
-    <a href="login.php">Voltar para login</a>
+    <h4><a href="login.php">Voltar para login</a></h4>
+    <h4><a href="index.php">Voltar pra tela inicial</a></h4>
+    
 
 </body>
 </html>
