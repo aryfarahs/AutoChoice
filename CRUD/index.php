@@ -44,6 +44,7 @@
             margin-right: 0px;
             width: 6%;
             max-width: 60px;
+            padding-left:;
         }
 
 
