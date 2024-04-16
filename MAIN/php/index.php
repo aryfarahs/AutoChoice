@@ -8,6 +8,34 @@
     <title>AutoChoice</title>
 </head>
 <body>
+
+<?php
+require_once 'funcoes.php';
+
+
+?>
+
+
+
+
+
+
+<?php
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
     <header>
         <img src="../images/wlogo.png" class="logo">
     </header>
