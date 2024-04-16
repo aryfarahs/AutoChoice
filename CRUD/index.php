@@ -40,6 +40,13 @@
             text-align: right;
         }
 
+        header #loginadas {
+            margin-right: 0px;
+            width: 6%;
+            max-width: 60px;
+        }
+
+
         .forml {
             display: flex;
             margin: auto;
@@ -95,19 +102,6 @@
         }
 
 
-        
-
-        
-
-
-
-
-
-
-
-
-
-
 
         footer {
             color: var(--branquin);
@@ -126,20 +120,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .galeria {
             
             /* background-color: red; */
@@ -151,30 +131,32 @@
         }
 
         .card {
-            background-color: white;
-            min-height: 230px;
-            max-height: 230px;
-
-            min-width: 200px;
-            max-width: 200px;
-            margin: 10px;
-
-            border: 1px solid black;
+            border: 1px solid var(--amarelo);
             border-radius: 10px;
-            
+            min-width: 120px;
+            max-width: 160px;
+            width: 30%;
+            min-height: 170px;
+            max-height: 1000px;
+            margin: 10px;
+        }
 
+        .card:hover {
+            background-color: lightgray;
+            cursor: pointer;
         }
 
         .fotoCard {
 
             
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
         }
 
 
         .tabelacard {
-            background-color: lightgray;
+            background-color: var(--amarelo);
+            color: white;
             width: 100%;
             height: 30px;
             border-radius: 10px 10px 0px 0px;
@@ -193,10 +175,13 @@
     require 'funcoes.php';
     
     ?>
+
+    <img src="images/wlogo.png" class="logo">
+
         <?php
 
             if(empty($_SESSION['usuario'])){
-                echo "<h4><a href='login-form.php'>Entrar</a></h4>";
+                echo "<a href='login-form.php'><img src='../MAIN/images/profile.png' id='loginadas'></img></a>";
             } else {
                 echo "<h4>Olá, {$_SESSION['usuario']}</h4>";
                 echo "<h4><a href='logout.php'>Sair</a></h4>";
@@ -204,14 +189,6 @@
         
         
         ?>
-
-
-
-
-
-
-        
-        <img src="images/wlogo.png" class="logo">
 
 
 </header>
