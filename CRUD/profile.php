@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../MAIN/css/style.css">
+    <link rel="stylesheet" href="../TEST/css/style.css">
     <script src="../js/javascript.js"></script>
     <title>AutoChoice</title>
 </head>
 <body>
     <header>
-        <img src="../MAIN/images/wlogo.png" class="logo">
+        <img src="../TEST/images/wlogo.png" class="logo">
     </header>
     <main>
         <div class="containerProfile">
             <div class="cabeca">
-                <img src="../MAIN/images/profile.png" alt="">
+                <img src="../TEST/images/profile.png" alt="">
                 <h1>Usuário XXX</h1>
-                <a href="settings.html"><img src="../MAIN/images/settings.png" class="conf2"></a>
+                <a href="settings.html"><img src="../TEST/images/settings.png" class="conf2"></a>
             </div>
             <div class="listas">
                 <div class="fav">
                     <h3>Favoritos</h3>
                     <div class="card2">
-                        <img src="../MAIN/images/xclose.png" class="close">
+                        <img src="../TEST/images/xclose.png" class="close">
                     </div>
                     <div class="card2">
 

@@ -184,11 +184,11 @@
         <?php
 
             if(empty($_SESSION['usuario'])){
-                echo "<a href='login-form.php'><img src='../MAIN/images/profile.png' id='loginadas'></img></a>";
+                echo "<a href='login-form.php'><img src='../TEST/images/profile.png' id='loginadas'></img></a>";
             } else {
                 echo "<h4>Olá, {$_SESSION['usuario']}</h4>";
                 echo "<h4><a href='logout.php'>Sair</a></h4>";
-                echo " <a href='../CRUD/profile.php'><img src='../MAIN/images/profile.png' id='loginadas'></img></a>";
+                echo " <a href='../CRUD/profile.php'><img src='../TEST/images/profile.png' id='loginadas'></img></a>";
             }
         
         
