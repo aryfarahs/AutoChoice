@@ -84,6 +84,7 @@ CREATE TABLE Favoritos (
 INSERT INTO usuario
   (senha, email, nome_usuario, tipo)
 VALUES
+  ('admin', 'admin@admin', 'admin', 'admin'),
   ('Ary2005', 'aryfelipe@gmail.com', 'AryFelipe', 'normal'),
   ('IcaroLKBold', 'icarolk@gmail.com', 'Icarolk', 'admin'),
   ('Adriano1603', 'adrianovale@gmail.com', 'Coldplay', 'normal'),
@@ -99,9 +100,8 @@ WHERE email = 'aryfelipe@gmail.com'
   
   
 
+select * from carro;
   
   USE autochoice;
-  SELECT * FROM carro;
   SELECT * FROM usuario;
   SELECT * FROM favoritos;
-  
