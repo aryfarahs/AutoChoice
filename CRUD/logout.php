@@ -1,6 +1,7 @@
 <?php
 require 'funcoes.php';
 
+
 function logout(){
     unset($_SESSION['usuario']);
     unset($_SESSION['nome']);
