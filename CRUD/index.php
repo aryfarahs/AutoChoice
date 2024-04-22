@@ -177,6 +177,7 @@
 <?php
     require 'funcoes.php';
     
+    
     ?>
 
     <img src="images/wlogo.png" class="logo">
@@ -188,7 +189,7 @@
             } else {
                 echo "<h4>Olá, {$_SESSION['usuario']}</h4>";
                 echo "<h4><a href='logout.php'>Sair</a></h4>";
-                echo " <a href='../CRUD/profile.php'><img src='../TEST/images/profile.png' id='loginadas'></img></a>";
+                echo " <a href='profile.php'><img src='../TEST/images/profile.png' id='loginadas'></img></a>";
             }
         
         
@@ -233,7 +234,14 @@
                 echo "</div>";
             echo "</div>";
     }
-    echo "</div>";
+
+    if($_SESSION['tipo'] == 'admin'){
+        echo "<a href='addcarro.php'><div class='card' style='background-image: url(images/carros/plus.jpg); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
+
+        echo "</div>";
+    }
+
+    echo "</div></a>";
     ?>
 
 

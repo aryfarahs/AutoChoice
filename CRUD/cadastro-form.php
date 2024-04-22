@@ -119,7 +119,7 @@
 
             <input type="submit" value="OK" class="envia">
         </form>
-        <h4 class="TEMPORARY" onclick="history.go(-1)" >Voltar para Login</h4>
+        <h4><a href="login.php">Voltar para login</a></h4>
         <h4><a href="index.php" id="voltaTudo">Voltar pra tela inicial</a></h4>
     </div>
 

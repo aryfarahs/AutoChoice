@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,26 @@
     <title>AutoChoice</title>
 </head>
 <body>
+
+
+<?php
+    require 'funcoes.php';
+
+?>
+
+
+
+
     <header>
+        <a href="index.php">Voltar</a>
         <img src="../TEST/images/wlogo.png" class="logo">
     </header>
     <main>
         <div class="containerProfile">
             <div class="cabeca">
                 <img src="../TEST/images/profile.png" alt="">
-                <h1>Usuário XXX</h1>
-                <a href="settings.html"><img src="../TEST/images/settings.png" class="conf2"></a>
+                <h1><?= "{$_SESSION['usuario']}"?></h1>
+                <a href="#"><img src="../TEST/images/settings.png" class="conf2"></a>
             </div>
             <div class="listas">
                 <div class="fav">
