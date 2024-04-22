@@ -1,4 +1,5 @@
 Sprint 1: 
--Crud Login 
--Tela incial 
--Foto veiculos 
+- Acessar área de administrador
+- Manter cadastro de veículos
+- Acessar área de administrador
+- Manter cadastro de usuários
