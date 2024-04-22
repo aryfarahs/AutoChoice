@@ -170,20 +170,7 @@
             text-align: center;
         }
 
-        .xizin{
-            max-width: 15px;
-            right: 0;
-        }
 
-        .titulocard{
-            
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            gap: 30px;
-            margin-top: 3px;
-
-        }
 
 
 
@@ -243,10 +230,9 @@
                 echo "<div class='titulo'>";
                     echo "<table class='tabelacard'>";
                         echo "<tr>";
-                            echo "<td class='titulocard'>";
-                                echo "<img src=''>";
+                            echo "<td >";
                                 echo "{$objAtual->modelo}";
-                                echo "<img src='images/xclose.png' class='xizin'>";
+
                             echo "</td>";
                         echo "</tr>";
                     echo "</table>";

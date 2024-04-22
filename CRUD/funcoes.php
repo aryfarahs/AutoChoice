@@ -1,9 +1,9 @@
 <?php
 
-session_start();
-
-
 $banco = new mysqli("127.0.0.1", "root", "PUC@1234", "AutoChoice");
+
+
+session_start();
 
 
 
