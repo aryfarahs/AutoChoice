@@ -20,6 +20,7 @@
 
     <header>
         <a href="index.php">Voltar</a>
+        <h4><a href='logout.php'>Sair</a></h4>
         <img src="../TEST/images/wlogo.png" class="logo">
     </header>
     <main>
@@ -27,8 +28,9 @@
             <div class="cabeca">
                 <img src="../TEST/images/profile.png" alt="">
                 <h1><?= "{$_SESSION['usuario']}"?></h1>
-                <a href="#"><img src="../TEST/images/settings.png" class="conf2"></a>
+                <a href="settings.php"><img src="../TEST/images/settings.png" class="conf2"></a>
             </div>
+        
             <div class="listas">
                 <div class="fav">
                     <h3>Favoritos</h3>
