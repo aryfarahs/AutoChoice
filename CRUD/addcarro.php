@@ -69,15 +69,14 @@
                 ('$categoria', '$marca', '$modelo', '$motor', $potencia, $qntLugares, $ano, $faixaPreco, $consumoEstrada, $consumoCidade, $qntAirbags, $estepe, $notaTesteSegurança, $appleAndroid, '$transmissao', $portaMalas, $altura, $largura, $comprimento, $zeroACem, '$propulsao', '$tracao', $torque, $importado, $cameraRe, $sensorEstacionar, $tetoSolar, $chavePresencial, $farolNeblina);";
 
                 $banco->query($query);
-                echo "<h1>Novo carro cadastrado com sucesso</h1>";
-                echo "<a href='index.php'>Voltar para tela inicial</a>";
+                echo "<div class='containerCU'><h2>Novo carro cadastrado com sucesso</h2>";
+                echo "<h4 class='volta'><a href='index.php'>Voltar para tela inicial</a></h4></div>";
     
     
             } else {
-                echo "<h1>Este carro ja está cadastrado no nosso banco de dados</h1>";
+                echo "<div class='containerCU'><h2>Este carro ja está cadastrado no nosso banco de dados</h2></div>";
                 echo "<br>";
                 require 'addcarro-form.php';
-                echo "<a href='index.php'>Voltar para tela inicial</a>";
             }
 
 

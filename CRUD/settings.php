@@ -21,7 +21,7 @@
 
     echo '<a href="alterarsenha.php">2. Senha</a>';
     echo "<br><br>";
-    echo "<a href='index.php'>Voltar para tela inicial</a>";
+    echo "<h4><a href='index.php'>Voltar para tela inicial</a></h4>";
 
 
     ?>

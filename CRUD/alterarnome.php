@@ -20,13 +20,13 @@ if($atual == null || $name == null){
     require 'alterarnome-form.php';
 } else {
     if(($banco->query("select * from usuario where email = '$emailatual' and nome_usuario = '$atual'")->num_rows) == 0){
-        echo "Seu nome atual não corresponde";
+        echo "<div class='containerCU'>Seu nome atual não corresponde</div>";
         require 'alterarnome-form.php';
 
     } else {
 
         if($atual == $name){
-            echo "Seu novo nome não pode ser igual ao nome anterior";
+            echo "<div class='containerCU'>Seu novo nome não pode ser igual ao nome anterior</div>";
             require 'alterarnome-form.php';
         } else{
 
@@ -34,10 +34,10 @@ if($atual == null || $name == null){
             WHERE email = '$emailatual'";
         
             $banco->query($query);
-            echo "Nome alterado com sucesso<br><br>";
+            echo "<div class='containerCU'><h4>Nome alterado com sucesso</h4><br>";
 
-            echo "Para sua segurança você foi desconectado. Realize seu login novamente. <br><br>";
-            echo "<a href='logout.php'>Voltar para tela inicial</a>";
+            echo "<h4>Para sua segurança você foi desconectado. Realize seu login novamente. </h4>";
+            echo "<h4 class='volta'><a href='logout.php'>Voltar para tela inicial</a><h4></div>";
         }
 
     }

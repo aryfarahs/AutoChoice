@@ -7,25 +7,26 @@
     <title>Alterar nome</title>
 </head>
 <body>
-    <h2>Alterar nome</h2>
-    <form action="alterarnome.php" method="POST">
+    <div class="container">
+        <h2>Alterar nome</h2>
+        <form action="alterarnome.php" method="POST">
 
-        <label for="atual">Nome atual:</label>
-        <input type="text" name="atual" id="atual" required>
+            <label for="atual">Nome atual:</label>
+            <input type="text" name="atual" id="atual" required>
 
-        <br><br>
+            <br><br>
 
-        <label for="name">Novo nome:</label>
-        <input type="text" name="name" id="name" required>
+            <label for="name">Novo nome:</label>
+            <input type="text" name="name" id="name" required>
 
-        <br><br>
+            <br><br>
 
-        <input type="submit" value="Enviar">
-    </form>
-
-
-    <h4><a href="settings.php">Voltar</a></h4>
-    <h4><a href="index.php">Voltar pra tela inicial</a></h4>
+            <input type="submit" value="Enviar" id="envia">
+        </form>
+        <h4><a href="settings.php">Voltar</a></h4>
+        <h4><a href="index.php">Voltar pra tela inicial</a></h4>
+    </div>  
+    
    
 
 </body>

@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="height: 500px;">
     <h2>Cadastro</h2>
         <form action="cadastro.php" method="POST" class="formLOG">
             <label for="nome">Nome:</label><br>
@@ -22,8 +22,8 @@
 
             <input type="submit" value="OK" class="envia">
         </form>
-        <h4><a href="login.php">Voltar para login</a></h4>
-        <h4><a href="index.php" id="voltaTudo">Voltar pra tela inicial</a></h4>
+        <h4 class="volta" style="margin-top: 100px;"><a href="login.php">Voltar para login</a></h4>
+        <h4 class="volta"><a href="index.php">Voltar pra tela inicial</a></h4>
     </div>
 
 </body>

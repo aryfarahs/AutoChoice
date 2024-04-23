@@ -7,24 +7,28 @@
     <title>Alterar senha</title>
 </head>
 <body>
-    <h2>Alterar senha</h2>
-    <form action="alterarsenha.php" method="POST">
+    <div class="container">
+        <h2>Alterar senha</h2>
+        <form action="alterarsenha.php" method="POST">
 
-        <label for="atual">Senha atual</label>
-        <input type="password" name="atual" id="atual" required>
+            <label for="atual">Senha atual</label>
+            <input type="password" name="atual" id="atual" required>
 
 
-        <br><br>
-        <label for="senha">Nova senha:</label>
-        <input type="password" name="senha" id="senha" required>
+            <br><br>
+            <label for="senha">Nova senha:</label>
+            <input type="password" name="senha" id="senha" required>
 
-        <br><br>
+            <br><br>
 
-        <input type="submit" value="Enviar">
-    </form>
+            <input type="submit" value="Enviar" id="envia">
+        </form>
+    
+        <h4><a href="settings.php">Voltar</a></h4>
+        <h4><a href="index.php">Voltar pra tela inicial</a></h4>
+    </div>
 
-    <h4><a href="settings.php">Voltar</a></h4>
-    <h4><a href="index.php">Voltar pra tela inicial</a></h4>
+    
 
 
 
