@@ -99,7 +99,7 @@
     }
 
     if($_SESSION['tipo'] == 'admin'){
-        echo "<a href='addcarro.php'><div class='card' style='background-image: url(images/carros/plus.jpg); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
+        echo "<a href='addcarro.php'><div class='card' style='background-image: url(images/carros/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
 
         echo "</div>";
     }
