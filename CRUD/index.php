@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>AutoChoice</title>
+    <style>
+
+        
+
+    </style>
 </head>
 <header>
+
 <?php
     require 'funcoes.php';
     
@@ -56,6 +62,8 @@
 
         
             echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
+            
+
                 echo "<div class='titulo'>";
                     echo "<table class='tabelacard'>";
                         echo "<tr>";
