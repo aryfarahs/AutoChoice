@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Settings</title>
 </head>
 <body>
@@ -10,19 +11,21 @@
     require 'funcoes.php';
 
     ?>
-<?php
+<div class="arrumamento">
+    <h2>O que deseja alterar?</h2>
+    <?php
+    echo '<a href="alterarnome.php">1. Nome de Usuário</a>';
 
-echo '<a href="alterarnome.php">Clique aqui para alterar seu nome</a>';
-
-echo "<br><br>";
-
-
-echo '<a href="alterarsenha.php">Clique aqui para alterar seu senha</a>';
-echo "<br><br>";
-echo "<a href='index.php'>Voltar para tela inicial</a>";
+    echo "<br><br>";
 
 
-?>
+    echo '<a href="alterarsenha.php">2. Senha</a>';
+    echo "<br><br>";
+    echo "<a href='index.php'>Voltar para tela inicial</a>";
+
+
+    ?>
+</div>
 
 
 
