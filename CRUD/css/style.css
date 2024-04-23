@@ -363,7 +363,7 @@ td {
 footer {
     color: var(--branquin);
     bottom: 0;
-    width: 100%;
+    width: 100vw;
 }
 
 footer > h5 {
