@@ -227,11 +227,10 @@ a:hover {
     min-height: 170px;
     max-height: 1000px;
     margin: 10px;
-    pointer-events: none;
 }
 
 .card:hover {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     cursor: pointer;
 }
 

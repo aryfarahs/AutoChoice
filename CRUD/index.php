@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>AutoChoice</title>
     <style>
 
+    .material-symbols-outlined {
+        margin-top: 140px;
+        margin-left: 120px;
+        position: absolute;
+        color: grey;
+
+        &:hover {
+            color: black;
+            font-weight: bold;
+            /* background-color: red; */
+        }
+    }
         
 
     </style>
@@ -62,7 +75,9 @@
 
         
             echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
-            
+
+            echo "<span class='material-symbols-outlined'>
+            close</span>";
 
                 echo "<div class='titulo'>";
                     echo "<table class='tabelacard'>";
