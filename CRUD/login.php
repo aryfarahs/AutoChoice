@@ -38,18 +38,18 @@
 
             if ($objAtual == null) {
 
-                echo "Usuário não encontrado";
+                echo "<div class='containerCU'>Usuário não encontrado</div>";
                 require 'login-form.php';
             } else {
                 if (!($senha === $objAtual->senha)) {
-                    echo 'Senha incorreta';
+                    echo "<div class='containerCU'>Senha incorreta</div>";
                     require 'login-form.php';
                 } else {
                     $_SESSION['usuario'] = $objAtual->nome_usuario;
                     // $_SESSION['nome'] = $objAtual->nome_usuario;
                     $_SESSION['email'] = $objAtual->email;
                     $_SESSION['tipo'] = $objAtual->tipo;
-                    echo 'Logado com sucesso';
+                    echo "<div class='containerCU'>Logado com sucesso";
                     header("Location: index.php");
                 }
             }
