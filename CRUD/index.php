@@ -76,8 +76,11 @@
         
             echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
-            echo "<span class='material-symbols-outlined'>
-            close</span>";
+
+            if($_SESSION['tipo'] == 'admin'){
+
+                echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
+            }
 
                 echo "<div class='titulo'>";
                     echo "<table class='tabelacard'>";
