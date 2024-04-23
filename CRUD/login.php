@@ -42,7 +42,7 @@
                 require 'login-form.php';
             } else {
                 if (!($senha === $objAtual->senha)) {
-                    echo 'Senha errada';
+                    echo 'Senha incorreta';
                     require 'login-form.php';
                 } else {
                     $_SESSION['usuario'] = $objAtual->nome_usuario;
