@@ -344,16 +344,18 @@ a:hover {
     padding: 20px;
 }
 
+.voltasai {
+
+}
+
 td {
     text-align: center;
 }
 
 footer {
     color: var(--branquin);
-
     bottom: 0;
     width: 100%;
-    
 }
 
 footer > h5 {
