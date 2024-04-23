@@ -1,0 +1,5 @@
+Sprint 1: 
+- Acessar área de administrador
+- Manter cadastro de veículos
+- Acessar área de administrador
+- Manter cadastro de usuários

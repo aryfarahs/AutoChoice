@@ -1,0 +1,388 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --pretin: #121517;
+    --branquin: #F7F9F9;
+    --cinza-escuro: #4C5154;
+    --amarelo: #FFC000;
+}
+
+html, body {
+    min-height: 90vh;
+    background-color: var(--branquin);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+header {
+    background-color: var(--cinza-escuro);
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0px 1px 4px 3px #a9a9a9;
+}
+
+header > img {
+    width: 15%;
+}
+
+header > h4{
+    text-align: right;
+}
+
+header #loginadas {
+    margin-right: 0px;
+    width: 6%;
+    max-width: 60px;
+}
+
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+h4 {
+    margin: 5px 0px;
+}
+
+label {
+    color: #4C5154;
+}
+
+input { 
+    width: 95%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #4C5154;
+    margin: 10px 0px;
+}
+
+input[type="radio"] {
+    width: fit-content;
+    margin: 10px 5px;
+}
+
+input[type="submit"] {
+    margin: 10px 50%;
+    transform: translate(-50%, -50%);
+}
+
+.volta {
+    width: max-content;
+    margin: 30px 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sai {
+    font-size: 16px;
+    margin: 0px 5%;
+}
+
+a {
+    text-decoration: none;
+    color: #4C5154;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#voltaTudo:hover {
+    cursor: pointer;
+    color: lightgray;   
+    text-decoration: none;        
+}
+
+.container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 420px;
+    min-height: 350px;
+    width: 30%;
+    min-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px lightgray;
+    margin: auto;
+    margin-top: 140px;
+    background-color: #F7F9F9;
+}
+
+.containerCU {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: min-content;
+    width: 30%;
+    min-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px lightgray;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #F7F9F9;
+}
+
+.TEMPORARY {
+    width: fit-content;
+    margin: 0px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.TEMPORARY:hover {
+    cursor: pointer;
+    color: lightgray;
+}
+
+.npcGO {
+    text-align: center;
+    bottom: 5px;
+    padding: 5px;
+}
+
+.formLOG {
+    height: 230px;
+    padding: 5px;
+}
+
+.envia {
+    background-color: #FFC000;
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    border: 0px;
+    color: white;
+}
+
+.envia:hover {
+    background-color: #FFB000;
+    cursor: pointer;
+}
+
+
+.forml {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--amarelo);
+    border-radius: 10px;
+    max-width: 70%;
+    height: 34px;
+    
+}
+
+.txt {
+    height: 20px;
+    padding: 7px 7px 7px 20px;
+    font-size: 16px;
+    border: 0px;
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    box-shadow: 1px 1px 3px 0.5px lightgray inset;
+    z-index: 1px;
+    position: relative;
+}
+
+.txt:focus-visible {
+    outline: none;
+}
+
+
+.forml:hover {
+    border: 1px solid #d4a30e;
+    border-radius: 10px;
+}
+
+.search {
+    align-items: right;
+    border: 0px solid var(--amarelo);
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--amarelo);
+    min-width: 10%;
+    min-height: 34px;
+}
+
+.search:hover {
+    cursor: pointer;
+    background-color: #d4a30e;
+    border: 1px solid #d4a30e;
+}
+
+.lupa {
+    width: 15px;
+}
+
+
+.galeria {
+    
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    border: 1px solid var(--amarelo);
+    border-radius: 10px;
+    min-width: 120px;
+    max-width: 160px;
+    width: 30%;
+    min-height: 170px;
+    max-height: 1000px;
+    margin: 10px;
+}
+
+.card:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.fotoCard {
+    width: 80%;
+    height: 80%;
+}
+
+
+.tabelacard {
+    background-color: var(--amarelo);
+    color: white;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+}
+
+.containerProfile {
+    margin: 50px auto;
+    min-width: 400px;
+    width: 70vw;
+}
+.cabeca {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabeca > img {
+    width: 10vw;
+    max-height: 110px;
+    max-width: 110px;
+}
+.cabeca > h1 {
+    font-size: 4vw;
+}
+
+.cabeca > a > .conf2 {
+    height: 3vw;
+    width: 3vw;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.fav, .hist {
+    margin: 15px;
+    min-height: 12vh;
+    overflow-x: auto;
+    border: 1px solid var(--amarelo);
+    padding: 2%;
+    border-radius: 5px;
+    color: var(--amarelo);
+}
+
+.fav, .hist > h3 {
+    font-size: 2vw;
+    font-weight: bolder;
+}
+
+.card2:hover + .close {
+    display: block;
+    cursor: pointer;
+}
+
+.card2:hover {
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+}
+
+.card2 {
+    display: inline-flex;
+    border: 1px dashed var(--amarelo);
+    border-radius: 10px;
+    min-width: 60px;
+    max-width: 160px;
+    width: 25%;
+    min-height: 100px;
+    max-height: 200px;
+    height: 20vw;
+    margin: 10px;
+}
+
+
+.listas {
+    min-height: 20vh;
+}
+
+.adCar {
+    max-width: 600px;
+    box-shadow: 0px 0px 10px 1px lightgray;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #F7F9F9;
+}
+
+.arrumamento {
+    box-shadow: 0px 0px 10px 0px lightgray;
+    width: fit-content;
+    margin: 240px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F7F9F9;
+}
+
+#envia {
+    background-color: #cecece;
+    margin-top: 50px;
+}
+
+#envia:hover {
+    background-color: #a9a9a9;
+    cursor: pointer;
+}
+
+td {
+    text-align: center;
+}
+
+footer {
+    color: var(--branquin);
+    bottom: 0;
+    width: 100%;
+}
+
+footer > h5 {
+    background-color: var(--cinza-escuro);
+    text-align: center;
+    padding: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
