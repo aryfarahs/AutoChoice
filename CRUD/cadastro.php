@@ -23,20 +23,14 @@ require 'funcoes.php';
     } else {
 
         if(($banco->query("Select id_usuario, nome_usuario, email, senha, tipo from usuario where email = '$email'")->num_rows) == 0){
+            
+            $query = "insert INTO usuario (nome_usuario, email, senha, tipo) VALUES ('$nome', '$email', '$senha', 'normal');";
+        
+            $banco->query($query);
+            #era bom fazer uma validação aqui
+            echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
+            require 'login-form.php';
 
-            if($consulta != null){
-                echo "<div class='containerCU'>Usuário ja cadastrado.</div>";
-                require 'login-form.php';
-            
-            } else{
-            
-                $query = "insert INTO usuario (nome_usuario, email, senha, tipo) VALUES ('$nome', '$email', '$senha', 'normal');";
-            
-                $banco->query($query);
-                #era bom fazer uma validação aqui
-                echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
-                require 'login-form.php';
-            }
         } else {
             echo "<div class='containerCU'>Usuário ja cadastrado</div>";
             require 'login.php';
