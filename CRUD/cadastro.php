@@ -25,7 +25,7 @@ require 'funcoes.php';
         if(($banco->query("Select id_usuario, nome_usuario, email, senha, tipo from usuario where email = '$email'")->num_rows) == 0){
 
             if($consulta != null){
-                echo "Usuário ja cadastrado.";
+                echo "<div class='containerCU'>Usuário ja cadastrado.</div>";
                 require 'login-form.php';
             
             } else{
@@ -34,11 +34,11 @@ require 'funcoes.php';
             
                 $banco->query($query);
                 #era bom fazer uma validação aqui
-                echo "<h1>Cadastrado com sucesso</h1>";
+                echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
                 require 'login-form.php';
             }
         } else {
-            echo "Usuário ja cadastrado";
+            echo "<div class='containerCU'>Usuário ja cadastrado</div>";
             require 'login.php';
         }
     
