@@ -28,8 +28,7 @@
                 <h1><?= "{$_SESSION['usuario']}"?></h1>
                 <a href="settings.php"><img src="images/settings.png" class="conf2"></a>
             </div>
-            <div class="voltasai">
-                <a href="index.php">Voltar</a>
+            <div class="sai">
                 <h4><a href='logout.php'>Sair</a></h4>
             </div>
             <div class="listas">

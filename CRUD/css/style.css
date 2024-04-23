@@ -67,6 +67,22 @@ input[type="radio"] {
     margin: 10px 5px;
 }
 
+input[type="submit"] {
+    margin: 10px 50%;
+    transform: translate(-50%, -50%);
+}
+
+.volta {
+    width: max-content;
+    margin: 30px 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sai {
+    font-size: 16px;
+    margin: 0px 5%;
+}
+
 a {
     text-decoration: none;
     color: #4C5154;
@@ -133,7 +149,6 @@ a:hover {
     background-color: #FFB000;
     cursor: pointer;
 }
-
 
 
 .forml {
@@ -212,6 +227,7 @@ a:hover {
     min-height: 170px;
     max-height: 1000px;
     margin: 10px;
+    pointer-events: none;
 }
 
 .card:hover {
@@ -251,14 +267,14 @@ a:hover {
     max-width: 110px;
 }
 .cabeca > h1 {
-    font-size: 6vw;
+    font-size: 4vw;
 }
 
 .cabeca > a > .conf2 {
-    height: 2.5vw;
-    width: 2.5vw;
-    min-width: 20px;
-    min-height: 20px;
+    height: 3vw;
+    width: 3vw;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .fav, .hist {
@@ -333,19 +349,12 @@ a:hover {
 
 #envia {
     background-color: #cecece;
+    margin-top: 50px;
 }
 
 #envia:hover {
     background-color: #a9a9a9;
     cursor: pointer;
-}
-
-.volta {
-    padding: 20px;
-}
-
-.voltasai {
-
 }
 
 td {
