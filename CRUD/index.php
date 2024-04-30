@@ -23,8 +23,15 @@
 
 
     .head{
+        font-size: 2vw;
         width: 33vw;
-        right: 0;
+        right: 3px;
+        color: white;
+        position: absolute;
+        display: flex;
+    }
+    a {
+        color: white;
     }
         
 
@@ -32,31 +39,31 @@
 </head>
 <body>
     <header>
-
     <?php
         require 'funcoes.php';
         
+        ?>
         
-        ?> 
+        
+                
+            <img src="images/wlogo.png" class="logo">
+        
+        <?php
 
-        <img src="images/wlogo.png" class="logo">
+    if(empty($_SESSION['usuario'])){
+        echo "<a href='login-form.php'><img src='images/profile.png' id='loginadas'></img></a>";
+    
+    } else {
+        echo "
+        <div class='head'>
+        <h4>Olá, <a href='profile.php'>{$_SESSION['usuario']}</a></h4>
+        <div>
+        <h4><a href='logout.php'>Sair</a></h4>";
+    }
 
-            <?php
+    ?>
 
-                if(empty($_SESSION['usuario'])){
-                    echo "<a href='login-form.php'><img src='images/profile.png' id='loginadas'></img></a>";
-                } else {
-                    
-            
-                    echo " <a href='profile.php'><img src='images/profile.png' id='loginadas'></img></a>";
-                }
-            
-            ?>
-            <div class="head">
 
-                <h1>Olá, <?= "{$_SESSION['usuario']}"?></h4>
-            
-            </div>
     </header>
     <main>
 
