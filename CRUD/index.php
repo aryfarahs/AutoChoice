@@ -22,7 +22,7 @@
     }
 
 
-    .head{
+    .head {
         font-size: 1vw;
         width: 33vw;
         right: 3px;

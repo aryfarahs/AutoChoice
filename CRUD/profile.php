@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="../js/javascript.js"></script>
     <title>AutoChoice</title>
+    <style>
+        .vazio {
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+                background-color: black;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -22,7 +31,7 @@
         <img src="images/wlogo.png" class="logo">
     </header>
     <main>
-        <div class="containerProfile">
+        <div class="containerProfile ">
             <div class="cabeca">
                 <img src="images/profile.png" alt="">
                 <h1><?= "{$_SESSION['usuario']}"?></h1>
@@ -47,6 +56,7 @@
 
                     </div>
                 </div>
+            
                 <div class="hist">
                     <h3>Histórico</h3>
                     <div class="card2">

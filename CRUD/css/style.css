@@ -297,6 +297,9 @@ a:hover {
     padding: 2%;
     border-radius: 5px;
     color: var(--amarelo);
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .fav, .hist > h3 {
