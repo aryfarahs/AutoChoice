@@ -31,7 +31,7 @@
         require 'funcoes.php';
         
         
-        ?>
+        ?> 
 
         <img src="images/wlogo.png" class="logo">
 
@@ -45,10 +45,8 @@
                     echo " <a href='profile.php'><img src='images/profile.png' id='loginadas'></img></a>";
                 }
             
-                
-            
             ?>
-
+        <h1><?= "{$_SESSION['usuario']}"?></h1>
 
     </header>
     <main>
