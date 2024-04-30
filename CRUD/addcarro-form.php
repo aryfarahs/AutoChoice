@@ -9,7 +9,7 @@
 <body class="formes">
     <div class="adCar">
     <h2>Adicionar carro</h2>
-    <form action="addcarro.php" method="POST">
+    <form action="addcarro.php" method="POST" id="form">
 
         <label for="categoria">Categoria:</label>
             <input type="text" id="categoria" name="categoria" required>
