@@ -23,13 +23,13 @@
 
 
     .head{
-        font-size: 2vw;
+        font-size: 1vw;
         width: 33vw;
         right: 3px;
         color: white;
-        position: absolute;
         display: flex;
     }
+
     a {
         color: white;
     }
@@ -51,7 +51,7 @@
         <?php
 
     if(empty($_SESSION['usuario'])){
-        echo "<a href='login-form.php'><img src='images/profile.png' id='loginadas'></img></a>";
+        echo "<a href='login-form.php'>LOGIN</a>";
     
     } else {
         echo "
