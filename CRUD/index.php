@@ -20,13 +20,25 @@
             /* background-color: red; */
         }
     }
+
+    header{
+        display: flex;
+    }
+
+    .head{
+        width: 33vw;
+        margin: auto;
+    }
         
 
     </style>
 </head>
 <body>
     <header>
+    <div class="head"> </div>
 
+
+    <div class="head">
     <?php
         require 'funcoes.php';
         
@@ -46,8 +58,12 @@
                 }
             
             ?>
-        <h1><?= "{$_SESSION['usuario']}"?></h1>
+            </div>
+            <div class="head">
 
+                <h1>Olá, <?= "{$_SESSION['usuario']}"?></h4>
+            
+            </div>
     </header>
     <main>
 
