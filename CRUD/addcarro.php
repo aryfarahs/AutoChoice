@@ -9,11 +9,14 @@
 <body>
     <?php
     require 'funcoes.php';
-
     ?>
 
-    <?php
+    <header>
+        <img src="images/wlogo.png" class="logo">
+    </header>
 
+    <?php
+    
     if($_SESSION['tipo'] != 'admin'){
         echo "Voce nao tem acesso a essa pagina";
         echo "<a href='index.php'>Voltar</a>";
@@ -69,14 +72,15 @@
                 ('$categoria', '$marca', '$modelo', '$motor', $potencia, $qntLugares, $ano, $faixaPreco, $consumoEstrada, $consumoCidade, $qntAirbags, $estepe, $notaTesteSegurança, $appleAndroid, '$transmissao', $portaMalas, $altura, $largura, $comprimento, $zeroACem, '$propulsao', '$tracao', $torque, $importado, $cameraRe, $sensorEstacionar, $tetoSolar, $chavePresencial, $farolNeblina);";
 
                 $banco->query($query);
+                require 'header.php';
                 echo "<div class='containerCU'><h2>Novo carro cadastrado com sucesso</h2>";
                 echo "<h4 class='volta'><a href='index.php'>Voltar para tela inicial</a></h4></div>";
     
     
             } else {
+                require 'addcarro-form.php';
                 echo "<div class='containerCU'><h2>Este carro ja está cadastrado no nosso banco de dados</h2></div>";
                 echo "<br>";
-                require 'addcarro-form.php';
             }
 
 
