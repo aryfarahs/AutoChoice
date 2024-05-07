@@ -7,6 +7,9 @@
     <title>Alterar nome</title>
 </head>
 <body>
+    <header>
+        <img src="images/wlogo.png" class="logo">
+    </header>
     <div class="container">
         <h2>Alterar nome</h2>
         <form action="alterarnome.php" method="POST">

@@ -8,6 +8,9 @@
 
 </head>
 <body>
+    <header>
+        <img src="images/wlogo.png" class="logo">
+    </header>
     <div class="container" style="height: 500px;">
     <h2>Cadastro</h2>
         <form action="cadastro.php" method="POST" class="formLOG">

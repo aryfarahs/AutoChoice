@@ -9,11 +9,9 @@
 <body>
     <?php
     require 'funcoes.php';
-
     ?>
 
     <?php
-
 
     $email = $_POST['email'] ?? null;
     $senha = $_POST['senha'] ?? null;
@@ -28,8 +26,8 @@
         $busca = $banco->query("Select id_usuario, nome_usuario, email, senha, tipo from usuario where email = '$email'");
 
         if (!$busca) {
-            echo 'Erro ao acessar o banco';
             require 'login-form.php';
+            echo 'Erro ao acessar o banco';
         } else {
 
 
@@ -38,12 +36,12 @@
 
             if ($objAtual == null) {
 
-                echo "<div class='containerCU'>Usuário não encontrado</div>";
                 require 'login-form.php';
+                echo "<div class='containerCU'>Usuário não encontrado</div>";
             } else {
                 if (!($senha === $objAtual->senha)) {
-                    echo "<div class='containerCU'>Senha incorreta</div>";
                     require 'login-form.php';
+                    echo "<div class='containerCU'>Senha incorreta</div>";
                 } else {
                     $_SESSION['usuario'] = $objAtual->nome_usuario;
                     // $_SESSION['nome'] = $objAtual->nome_usuario;
