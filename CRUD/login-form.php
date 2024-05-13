@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
+    <style>
+        .divolho {
+            display: flex;
+            flex-direction: row; 
+            margin-bottom: 25px;
+        }
+
+        .divolho > .olho {
+            display: block;
+            width: 30px; 
+            height: 30px; 
+            margin: auto; 
+            padding-left: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .divolho > .olhoF {
+            display: none;
+            width: 30px; 
+            height: 30px; 
+            margin: auto; 
+            padding-left: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    </style>
+    <script src="js/javascript.js"></script>
 </head>
 <body>
     <header>
@@ -14,12 +44,16 @@
         <div class="container">
         <h2>Login</h2>
             <form action="login.php" method="POST" class="formLOG">
-
+                
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
-
+                
                 <label for="senha">Senha:</label><br>
-                <input type="password" id="senha" name="senha" required><br><br>
+                <div class="divolho">
+                    <input type="password" id="senha" name="senha" required><br></br>
+                    <img src="images/olho.png" id="olhoF" class="olhoF" onclick="trocaOlho()">
+                    <img src="images/olhoF.png" id="olho" class="olho" onclick="trocaOlho()">
+                </div>
 
                 <input type="submit" value="OK" class="envia">
             </form>

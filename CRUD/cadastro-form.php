@@ -7,11 +7,11 @@
     <title>Cadastro</title>
 
 </head>
-<body>
+<body style="min-height: 830px;">
     <header>
         <img src="images/wlogo.png" class="logo">
     </header>
-    <div class="container" style="height: 500px;">
+    <div class="container" style="height: 570px;">
     <h2>Cadastro</h2>
         <form action="cadastro.php" method="POST" class="formLOG">
             <label for="nome">Nome:</label><br>
@@ -28,7 +28,7 @@
 
             <input type="submit" value="OK" class="envia">
         </form>
-        <h4 class="volta" style="margin-top: 100px;"><a href="login.php">Voltar para login</a></h4>
+        <h4 class="volta" style="margin-top: 180px;"><a href="login.php">Voltar para login</a></h4>
         <h4 class="volta"><a href="index.php">Voltar pra tela inicial</a></h4>
     </div>
 

@@ -10,6 +10,33 @@ function closePopUp() {
     document.getElementById("footer").style.marginTop = "5%"
 }
 
+
+function trocaOlho() {
+    var olho = document.getElementById("olho")
+    var olhoF = document.getElementById("olhoF")
+    var input = document.getElementById("senha")
+
+    if (olho.style.display == "none") {
+        olho.style.display ="block"
+    } else {
+        olho.style.display = "none"
+    }
+
+    if (olhoF.style.display == "block") {
+        olhoF.style.display ="none"
+    } else {
+        olhoF.style.display = "block"
+    }
+
+    if (input.type === 'text') {
+        input.type = 'password'
+    } else {
+        input.type = 'text'
+    }
+
+
+}
+
 // VALIDANDO FORM
 // variáveis
 const form = document.getElementById("form")
