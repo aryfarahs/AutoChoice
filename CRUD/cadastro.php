@@ -32,8 +32,19 @@ require 'funcoes.php';
             echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
 
         } else {
+
+            
+            unset($_SESSION['usuario']);
+            unset($_SESSION['nome']);
+            unset($_SESSION['email']);
+            unset($_SESSION['tipo']);
+            session_unset();
+            session_destroy();
             require 'login.php';
             echo "<div class='containerCU'>Usuário ja cadastrado</div>";
+            
+
+
         }
     
  

@@ -21,10 +21,10 @@
             <input type="email" id="emailC" name="emailC" required><br><br>
 
             <label for="senha">Senha:</label><br>
-            <input type="password" id="senhaC" name="senhaC" required><br><br>
+            <input type="password" id="senhaC" name="senhaC" minlength="6"><br><br>
 
             <label for="senha">Confirmar Senha:</label><br>
-            <input type="password" id="senha2" name="senha2" required><br><br>
+            <input type="password" id="senha2" name="senha2" minlength="6" required><br><br>
 
             <input type="submit" value="OK" class="envia">
         </form>
