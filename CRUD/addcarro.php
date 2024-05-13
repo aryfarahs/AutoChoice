@@ -9,21 +9,14 @@
 <body>
     <?php
     require 'funcoes.php';
-    ?>
-
-    <header>
-        <img src="images/wlogo.png" class="logo">
-    </header>
-
-    <?php
+    
     
     if($_SESSION['tipo'] != 'admin'){
         echo "Voce nao tem acesso a essa pagina";
         echo "<a href='index.php'>Voltar</a>";
     } else {
 
-
-
+        require 'header.php';
 
 
         $categoria = $_POST['categoria'] ?? null;

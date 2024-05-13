@@ -13,9 +13,9 @@
 require 'funcoes.php';
 
 
-    $email = $_POST['email'] ?? null;
-    $senha = $_POST['senha'] ?? null;
-    $nome = $_POST['nome'] ?? null;
+    $email = $_POST['emailC'] ?? null;
+    $senha = $_POST['senhaC'] ?? null;
+    $nome = $_POST['nomeC'] ?? null;
 
 
     if ($email == null || $senha == null || $nome == null) {
@@ -28,12 +28,12 @@ require 'funcoes.php';
         
             $banco->query($query);
             #era bom fazer uma validação aqui
-            echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
             require 'login-form.php';
+            echo "<div class='containerCU'><h2>Cadastrado com sucesso</h2></div>";
 
         } else {
-            echo "<div class='containerCU'>Usuário ja cadastrado</div>";
             require 'login.php';
+            echo "<div class='containerCU'>Usuário ja cadastrado</div>";
         }
     
  

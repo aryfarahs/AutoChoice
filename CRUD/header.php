@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Add carro</title>
     <style>
-        a {
+        a, h4 {
             color: white;
+        }
+        .seilaa {
+            position: absolute;
+            right: 0;
         }
     </style>
 </head>
@@ -26,11 +30,11 @@
         
         } else {
             echo "
-            <div class='head'>
-            <h4>Olá, <a href='profile.php'>{$_SESSION['usuario']}</a></h4>
-            <div>
-            <h4><a href='logout.php'>Sair</a></h4>";
-        }
+            <div class=''seilaa>
+                <h4>Olá, <a href='profile.php'>{$_SESSION['usuario']}</a></h4>
+                <h4><a href='logout.php'>Sair</a></>
+            </div>";
+            }
 
         ?>
     </header>

@@ -15,13 +15,16 @@
     <h2>Cadastro</h2>
         <form action="cadastro.php" method="POST" class="formLOG">
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required><br><br>
+            <input type="text" id="nomeC" name="nomeC" required><br><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="emailC" name="emailC" required><br><br>
 
             <label for="senha">Senha:</label><br>
-            <input type="password" id="senha" name="senha" required><br><br>
+            <input type="password" id="senhaC" name="senhaC" required><br><br>
+
+            <label for="senha">Confirmar Senha:</label><br>
+            <input type="password" id="senha2" name="senha2" required><br><br>
 
             <input type="submit" value="OK" class="envia">
         </form>

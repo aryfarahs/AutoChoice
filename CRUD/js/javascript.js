@@ -31,15 +31,26 @@ const altura = document.getElementById("altura")
 const largura = document.getElementById("largura")
 const comprimento = document.getElementById("comprimento")
 const zeroACem = document.getElementById("zeroACem")
-const propulsao = document.getElementById(propulsao)
+const propulsao = document.getElementById("propulsao")
 const tracao = document.getElementById("tracao")
 const torque = document.getElementById("torque")
+
+const senhaC = document.getElementById("senhaC")
 
 
 // validação
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    // senha
+    if (senhaC.value === "" || !senhaForte(senhaC.value)) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "A senha deve conter: Mínimo de 6 caracteres, 1 Letra Maiúscula, 1 Número",
+          });
+        return
+    }
 
 
 
@@ -52,6 +63,17 @@ form.addEventListener("submit", (event) => {
 
 
 // funções
+// senha
+function senhaForte(senhaC) {
+    const senhaRegex = new RegExp(
+        /^(?=.*[A-Z])(?=.*\d)(?=.*[$*&@#_])[A-Za-z\d$*&@#_]{6,}(?!(?:1234|4321))$/
+    )
+    if(senhaRegex.test(senhaC)) {
+        return true;
+    } return false
+}
+
+
 // categoria, modelo
 function formatUpper(categoria) {
     const up = categoria.value.toUpperCase();

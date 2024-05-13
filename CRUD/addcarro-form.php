@@ -7,9 +7,6 @@
     <title>Add carro</title>
 </head>
 <body class="formes">
-    <header>
-        <img src="images/wlogo.png" class="logo">
-    </header>
     <div class="adCar">
     <h2>Adicionar carro</h2>
     <form action="addcarro.php" method="POST" id="form">

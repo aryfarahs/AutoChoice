@@ -27,7 +27,7 @@
 
         if (!$busca) {
             require 'login-form.php';
-            echo 'Erro ao acessar o banco';
+            echo "<div class='containerCU'>Erro ao acessar o banco</div>";
         } else {
 
 
