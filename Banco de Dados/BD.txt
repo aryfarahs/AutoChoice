@@ -88,7 +88,8 @@ VALUES
   ('Ary2005', 'aryfelipe@gmail.com', 'AryFelipe', 'normal'),
   ('IcaroLKBold', 'icarolk@gmail.com', 'Icarolk', 'admin'),
   ('Adriano1603', 'adrianovale@gmail.com', 'Coldplay', 'normal'),
-  ('MariFodasse', 'marixsprada@gmail.com', 'MariXsprada', 'normal');
+  ('MariFodasse', 'marixsprada@gmail.com', 'MariXsprada', 'normal'),
+  ('Vini', 'vinilindo@gmail.com', 'Vinicius@123', 'admin');
 
 
 
