@@ -13,9 +13,9 @@
 require 'funcoes.php';
 
 
-    $email = $_POST['emailC'] ?? null;
-    $senha = $_POST['senhaC'] ?? null;
-    $nome = $_POST['nomeC'] ?? null;
+    $email = $_POST['email'] ?? null;
+    $senha = $_POST['senha'] ?? null;
+    $nome = $_POST['nome'] ?? null;
 
 
     if ($email == null || $senha == null || $nome == null) {
