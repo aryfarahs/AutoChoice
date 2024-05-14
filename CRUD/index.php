@@ -97,7 +97,7 @@
         $qtd = $resultado->num_rows;
 
         if($qtd == 0){
-            echo "<div class='containerCU' style='min-height:200px;'><h2>Nenhum resultado encontrado</h2></div>"; 
+            echo "<div class='containerCU' style='min-height:200px; justify-content: center'><h2>Nenhum resultado encontrado</h2></div>"; 
         } else {
 
         
