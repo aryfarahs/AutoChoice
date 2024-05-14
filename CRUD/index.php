@@ -97,7 +97,7 @@
         $qtd = $resultado->num_rows;
 
         if($qtd == 0){
-            echo "Nenhum resultado encontrado"; 
+            echo "<div class='containerCU' style='min-height:200px;'><h2>Nenhum resultado encontrado</h2></div>"; 
         } else {
 
         
@@ -142,17 +142,12 @@
 
         }
 
-    
-
-
-
 
         ?>
 
     </main>
-    <footer id="footer">
+    <footer>
         <h5>Todos os diretos reservados - AutoChoice</h5>
     </footer>
 </body>
-<script src="js/modal.js"></script>
 </html>

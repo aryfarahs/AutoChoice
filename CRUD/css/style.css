@@ -11,7 +11,7 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 90vh;
     margin-bottom: 20vh;
     background-color: var(--branquin);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -380,7 +380,7 @@ td {
 
 footer {
     color: var(--branquin);
-    bottom: 0px;
+    bottom: 0vh;
     width: 100%;
 }
 
