@@ -42,13 +42,12 @@
         require 'header.php';
     ?>
     <main>
+    
+        <form action="" class="forml">
+            <input type="type" name="search" placeholder="O que deseja ver?" class="txt" id="forml">
 
-
-            <form action="" class="forml">
-                <input type="text" name="search" placeholder="O que deseja ver?" class="txt" id="forml">
-
-                <button type="submit" class="search"><img src="images/lupa.png" class="lupa"></button>
-            </form> 
+            <button type="submit" class="search"><img src="images/lupa.png" class="lupa"></button>
+        </form> 
 
 
         <?php
@@ -88,7 +87,7 @@
         }
 
         if($_SESSION['tipo'] == 'admin'){
-            echo "<a href='addcarro.php'><div class='card' style='background-image: url(images/carros/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
+            echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/carros/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
 
             echo "</div>";
         }
@@ -101,4 +100,5 @@
         <h5>Todos os diretos reservados - AutoChoice</h5>
     </footer>
 </body>
+<script src="js/modal.js"></script>
 </html>
