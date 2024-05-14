@@ -1,10 +1,10 @@
-DROP DATABASE autochoice;
+DROP DATABASE if exists autochoice;
 CREATE DATABASE autochoice;
 
 USE autochoice;
 
 
-drop table carro;
+drop table if exists carro;
 CREATE TABLE Carro (
     id_carro INT AUTO_INCREMENT PRIMARY KEY,
     categoria VARCHAR(50),
@@ -60,8 +60,8 @@ select * from carro;
 
 
 ----------------------------------------------------------------------------
-drop table usuario;
-drop table favoritos;
+drop table if exists usuario;
+drop table if exists favoritos;
 
 CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
