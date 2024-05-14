@@ -52,38 +52,84 @@
 
         <?php
         
+
+        if(!isset($_GET['search'])){
         $resultado = $banco->query(" select * FROM carro;");
 
+        } else {
+
+
+            $cu = $_GET['search'];
+
+            $resultado = $banco->query("select *
+            FROM carro
+            WHERE categoria LIKE '%$cu%'
+               OR marca LIKE '%$cu%'
+               OR modelo LIKE '%$cu%'
+               OR motor LIKE '%$cu%'
+               OR potencia LIKE '%$cu%'
+               OR qntLugares LIKE '%$cu%'
+               OR ano LIKE '%$cu%'
+               OR faixaPreco LIKE '%$cu%'
+               OR consumoEstrada LIKE '%$cu%'
+               OR consumoCidade LIKE '%$cu%'
+               OR qntAirbags LIKE '%$cu%'
+               OR estepe LIKE '%$cu%'
+               OR notaTesteSeguranca LIKE '%$cu%'
+               OR appleAndroid LIKE '%$cu%'
+               OR transmissao LIKE '%$cu%'
+               OR portaMalas LIKE '%$cu%'
+               OR altura LIKE '%$cu%'
+               OR largura LIKE '%$cu%'
+               OR comprimento LIKE '%$cu%'
+               OR zeroACem LIKE '%$cu%'
+               OR propulsao LIKE '%$cu%'
+               OR tracao LIKE '%$cu%'
+               OR torque LIKE '%$cu%'
+               OR importado LIKE '%$cu%'
+               OR cameraRe LIKE '%$cu%'
+               OR sensorEstacionar LIKE '%$cu%'
+               OR tetoSolar LIKE '%$cu%'
+               OR chavePresencial LIKE '%$cu%'
+               OR farolNeblina LIKE '%$cu%'");
+        }
+
         $qtd = $resultado->num_rows;
+
+        if($qtd == 0){
+            echo "Nenhum resultado encontrado"; 
+        } else {
+
+        
 
         echo "<div class='galeria'>";
 
         for($i = 1; $i <= $qtd; $i++){
             $objAtual = $resultado->fetch_object();
 
+                    echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
+
+
+                    if($_SESSION['tipo'] == 'admin'){
+
+                        echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
+                    }
+
+                        echo "<div class='titulo'>";
+                            echo "<table class='tabelacard'>";
+                                echo "<tr>";
+                                    echo "<td >";
+                                        echo "{$objAtual->modelo}";
+
+                                    echo "</td>";
+                                echo "</tr>";
+                            echo "</table>";
+                        echo "</div>";
+
+                        echo "<div class='fotoCard'>";
+                        echo "</div>";
+                    echo "</div>";
             
-                echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
-
-
-                if($_SESSION['tipo'] == 'admin'){
-
-                    echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
-                }
-
-                    echo "<div class='titulo'>";
-                        echo "<table class='tabelacard'>";
-                            echo "<tr>";
-                                echo "<td >";
-                                    echo "{$objAtual->modelo}";
-
-                                echo "</td>";
-                            echo "</tr>";
-                        echo "</table>";
-                    echo "</div>";
-
-                    echo "<div class='fotoCard'>";
-                    echo "</div>";
-                echo "</div>";
         }
 
         if($_SESSION['tipo'] == 'admin'){
@@ -93,6 +139,14 @@
         }
 
         echo "</div></a>";
+
+        }
+
+    
+
+
+
+
         ?>
 
     </main>
