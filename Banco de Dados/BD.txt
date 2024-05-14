@@ -60,9 +60,6 @@ select * from carro;
 
 
 ----------------------------------------------------------------------------
-drop table if exists usuario;
-drop table if exists favoritos;
-
 CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome_usuario VARCHAR(100) NOT NULL,
@@ -70,6 +67,7 @@ CREATE TABLE Usuario (
     senha VARCHAR(50) NOT NULL,
     tipo VARCHAR(50) NOT NULL DEFAULT 'normal'
 );
+
 
 
 CREATE TABLE Favoritos (
