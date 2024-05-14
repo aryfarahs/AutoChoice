@@ -37,6 +37,32 @@ function trocaOlho() {
 
 }
 
+function trocaOlho2() {
+    var olho2 = document.getElementById("olho2")
+    var olhoF2 = document.getElementById("olhoF2")
+    var input2 = document.getElementById("senha2")
+
+    if (olho2.style.display == "none") {
+        olho2.style.display ="block"
+    } else {
+        olho2.style.display = "none"
+    }
+
+    if (olhoF2.style.display == "block") {
+        olhoF2.style.display ="none"
+    } else {
+        olhoF2.style.display = "block"
+    }
+
+    if (input2.type === 'text') {
+        input2.type = 'password'
+    } else {
+        input2.type = 'text'
+    }
+
+
+}
+
 // VALIDANDO FORM
 // variáveis
 const form = document.getElementById("form")

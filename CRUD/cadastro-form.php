@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Cadastro</title>
+    <style>
+        .divolho {
+            display: flex;
+            flex-direction: row; 
+            margin-bottom: 25px;
+        }
+
+        .divolho > .olho {
+            display: block;
+            width: 30px; 
+            height: 30px; 
+            margin: auto; 
+            padding-left: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .divolho > .olhoF {
+            display: none;
+            width: 30px; 
+            height: 30px; 
+            margin: auto; 
+            padding-left: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    </style>
 
 </head>
 <body style="min-height: 830px;">
@@ -21,10 +50,18 @@
             <input type="email" id="emailC" name="emailC" required><br><br>
 
             <label for="senha">Senha:</label><br>
-            <input type="password" id="senhaC" name="senhaC" minlength="6"><br><br>
+            <div class="divolho">
+                <input type="password" id="senha" name="senha" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[$*&@#_])[A-Za-z\d$*&@#_]{6,}(?!(?:1234|4321))$"><br><br>
+                <img src="images/olho.png" id="olhoF" class="olhoF" onclick="trocaOlho()">
+                <img src="images/olhoF.png" id="olho" class="olho" onclick="trocaOlho()">
+            </div>
 
-            <label for="senha">Confirmar Senha:</label><br>
-            <input type="password" id="senha2" name="senha2" minlength="6" required><br><br>
+            <label for="senha2">Confirmar Senha:</label><br>
+            <div class="divolho">
+                <input type="password" id="senha2" name="senha2" required><br><br>
+                <img src="images/olho.png" id="olhoF2" class="olhoF" onclick="trocaOlho2()">
+                <img src="images/olhoF.png" id="olho2" class="olho" onclick="trocaOlho2()">
+            </div>
 
             <input type="submit" value="OK" class="envia">
         </form>
@@ -33,4 +70,5 @@
     </div>
 
 </body>
+<script src="js/javascript.js"></script>
 </html>
