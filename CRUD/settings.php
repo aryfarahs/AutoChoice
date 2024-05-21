@@ -9,7 +9,6 @@
 <body>
 <?php
     require 'funcoes.php';
-
     ?>
 <div class="arrumamento">
     <h2>O que deseja alterar?</h2>
