@@ -42,7 +42,9 @@
             ?>
                 
         <div>
-            <img src="images/wlogo.png" class="logo" style="width: 15vw;">
+            <a href="index.php">
+                <img src="images/wlogo.png" class="logo" style="width: 15vw;">
+            </a> 
         </div>
         <div style="margin-top: auto; text-align: right;">
             <?php
