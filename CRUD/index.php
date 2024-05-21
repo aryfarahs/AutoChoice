@@ -114,7 +114,7 @@
 
                         echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
                     }
-                    echo"<a href='infoCarro.php'>";
+                    echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
                         echo "<div class='titulo'>";
                             echo "<table class='tabelacard'>";
                                 echo "<tr>";
