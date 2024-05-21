@@ -114,7 +114,7 @@
 
                         echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
                     }
-
+                    echo"<a href='infoCarro.php'>";
                         echo "<div class='titulo'>";
                             echo "<table class='tabelacard'>";
                                 echo "<tr>";
@@ -129,7 +129,10 @@
                         echo "<div class='fotoCard'>";
                         echo "</div>";
                     echo "</div>";
+                echo"</a>";
             
+        }
+
         }
 
         if($_SESSION['tipo'] == 'admin'){
@@ -140,7 +143,7 @@
 
         echo "</div></a>";
 
-        }
+    
 
 
         ?>
