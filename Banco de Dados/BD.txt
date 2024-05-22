@@ -73,7 +73,7 @@ CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nome_usuario VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    senha VARCHAR(50) NOT NULL,
+    senha VARCHAR(200) NOT NULL,
     tipo VARCHAR(50) NOT NULL DEFAULT 'normal'
 );
 
@@ -124,3 +124,5 @@ select * from carro;
   SELECT * FROM usuario;
   
   SELECT * FROM Favoritos;
+  
+  ALTER TABLE usuario MODIFY senha VARCHAR(255);

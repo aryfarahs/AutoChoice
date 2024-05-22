@@ -11,50 +11,42 @@
     require 'funcoes.php';
     ?>
 
-    <?php
+<?php
 
-    $email = $_POST['email'] ?? null;
-    $senha = $_POST['senha'] ?? null;
-    $nome = $_POST['nome'] ?? null;
+$email = $_POST['email'] ?? null;
+$senha = $_POST['senha'] ?? null;
+$nome = $_POST['nome'] ?? null;
 
+if ($email == null || $senha == null) {
+    require 'login-form.php';
+} else {
+    $busca = $banco->query("SELECT id_usuario, nome_usuario, email, senha, tipo FROM usuario WHERE email = '$email'");
 
-    if ($email == null || $senha == null) {
+    if (!$busca) {
         require 'login-form.php';
+        echo "<div class='containerCU'>Erro ao acessar o banco</div>";
     } else {
-        
-    
-        $busca = $banco->query("Select id_usuario, nome_usuario, email, senha, tipo from usuario where email = '$email'");
+        $objAtual = $busca->fetch_object();
 
-        if (!$busca) {
+        if ($objAtual == null) {
             require 'login-form.php';
-            echo "<div class='containerCU'>Erro ao acessar o banco</div>";
+            echo "<div class='containerCU'>Usuário não encontrado</div>";
         } else {
-
-
-            $objAtual = $busca->fetch_object();
-
-
-            if ($objAtual == null) {
-
-                require 'login-form.php';
-                echo "<div class='containerCU'>Usuário não encontrado</div>";
+            if (password_verify($senha, $objAtual->senha)) {
+                $_SESSION['usuario'] = $objAtual->nome_usuario;
+                $_SESSION['email'] = $objAtual->email;
+                $_SESSION['tipo'] = $objAtual->tipo;
+                echo "<div class='containerCU'>Logado com sucesso";
+                header("Location: index.php");
             } else {
-                if (!($senha === $objAtual->senha)) {
-                    require 'login-form.php';
-                    echo "<div class='containerCU'>Senha incorreta</div>";
-                } else {
-                    $_SESSION['usuario'] = $objAtual->nome_usuario;
-                    // $_SESSION['nome'] = $objAtual->nome_usuario;
-                    $_SESSION['email'] = $objAtual->email;
-                    $_SESSION['tipo'] = $objAtual->tipo;
-                    echo "<div class='containerCU'>Logado com sucesso";
-                    header("Location: index.php");
-                }
+                require 'login-form.php';
+                echo "<div class='containerCU'>Senha incorreta</div>";
             }
         }
     }
+}
+?>
 
-    ?>
 
 
 

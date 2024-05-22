@@ -10,56 +10,45 @@
 <?php
     require 'funcoes.php';
 
+    
 
-
-$atual = $_POST['atual'] ?? null;
-$senha = $_POST['senha'] ?? null;
-$emailatual = $_SESSION['email'];
-
-
-
-
-if($atual == null || $senha == null){
-    require 'alterarsenha-form.php';
-} else {
-
-    if(($banco->query("select * from usuario where email = '$emailatual' and senha = '$atual'")->num_rows) == 0){
-        echo "<div class='containerCU'>Sua senha atual não corresponde</div>";
+    $atual = $_POST['atual'] ?? null;
+    $senha = $_POST['senha'] ?? null;
+    $emailatual = $_SESSION['email'];
+    
+    if ($atual == null || $senha == null) {
         require 'alterarsenha-form.php';
-
     } else {
-
-        if($atual == $senha){
-            echo "<div class='containerCU'>Sua nova senha não pode ser igual a senha antiga</div>";
+        $busca = $banco->query("SELECT id_usuario, nome_usuario, email, senha, tipo FROM usuario WHERE email = '$emailatual'");
+    
+        if (!$busca) {
             require 'alterarsenha-form.php';
-        } else{
-
-            $query = "update usuario SET senha = '$senha'
-            WHERE email = '$emailatual'";
-        
-            $banco->query($query);
-            echo "<div class='containerCU'><h4>Senha alterada com sucesso</h4><br>";
-
-            echo "<h4>Para sua segurança você foi desconectado. Realize seu login novamente.</h4><br>";
-            echo "<h4 class='volta'><a href='logout.php'>Voltar para tela inicial</a><h4></div>";
+            echo "<div class='containerCU'>Erro ao acessar o banco</div>";
+        } else {
+            $objAtual = $busca->fetch_object();
+    
+            if ($objAtual == null) {
+                require 'alterarsenha-form.php';
+                echo "<div class='containerCU'>Usuário não encontrado</div>";
+            } else {
+                if (password_verify($atual, $objAtual->senha)) {
+                    $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+                    $query = "UPDATE usuario SET senha = '$senhaCriptografada' WHERE email = '$emailatual'";
+                    $banco->query($query);
+                    echo "<div class='containerCU'><h4>Senha alterada com sucesso</h4><br>";
+                    echo "<h4>Para sua segurança, você foi desconectado. Realize o login novamente.</h4><br>";
+                    echo "<h4 class='volta'><a href='logout.php'>Voltar para tela inicial</a></h4></div>";
+                } else {
+                    require 'alterarsenha-form.php';
+                    echo "<div class='containerCU'>Senha atual incorreta</div>";
+                }
+            }
         }
-
     }
+    ?>
+    
 
 
-
-
-
-
-
-
-}
-
-
-
-
-
-?>
 
 
 
