@@ -93,11 +93,11 @@ CREATE TABLE Favoritos (
 INSERT INTO usuario
   (senha, email, nome_usuario, tipo)
 VALUES
-  ('admin', 'admin@admin', 'admin', 'admin'),
-  ('Ary2005', 'aryfelipe@gmail.com', 'AryFelipe', 'normal'),
-  ('IcaroLKBold', 'icarolk@gmail.com', 'Icarolk', 'admin'),
-  ('Adriano1603', 'adrianovale@gmail.com', 'Coldplay', 'normal'),
-  ('MariFodasse', 'marixsprada@gmail.com', 'MariXsprada', 'normal'),
+  ('admin', 'admin@admin', 'Admin@123', 'admin'),
+  ('Ary2005', 'aryfelipe@gmail.com', 'Ary@123', 'admin'),
+  ('IcaroLKBold', 'icarolk@gmail.com', 'Icaro@123', 'admin'),
+  ('Adriano1603', 'adrianovale@gmail.com', 'Cold@123', 'normal'),
+  ('MariFodasse', 'marixsprada@gmail.com', 'Mari@123', 'normal'),
   ('Vini', 'vinilindo@gmail.com', 'Vinicius@123', 'admin');
 
 
