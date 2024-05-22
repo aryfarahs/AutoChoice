@@ -33,6 +33,18 @@
                 cursor: pointer;
             }
         }
+
+        .error {
+            display: none; /* Ocultar a mensagem de erro inicialmente */
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        input:invalid + .error {
+            display: block; /* Mostrar a mensagem de erro se o input for inválido */
+        }
+
     </style>
 
 </head>
@@ -40,9 +52,9 @@
     <header>
         <img src="images/wlogo.png" class="logo">
     </header>
-    <div class="container" style="height: 570px;">
+    <div id="containerCad" class="container" style="height: 570px;">
     <h2>Cadastro</h2>
-        <form action="cadastro.php" method="POST" class="formLOG">
+        <form action="cadastro.php" method="POST" class="formLOG" id="formCad">
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome" required><br><br>
 
@@ -55,6 +67,7 @@
                 <img src="images/olho.png" id="olhoF" class="olhoF" onclick="trocaOlho()">
                 <img src="images/olhoF.png" id="olho" class="olho" onclick="trocaOlho()">
             </div>
+            <span class="error" id="senhaErro">A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial ($*&@#_).</span>
 
             <label for="senha2">Confirmar Senha:</label><br>
             <div class="divolho">
@@ -65,10 +78,11 @@
 
             <input type="submit" value="OK" class="envia">
         </form>
-        <h4 class="volta" style="margin-top: 180px;"><a href="login.php">Voltar para login</a></h4>
+        <h4 id="voltarCad" class="volta" style="margin-top: 180px;"><a href="login.php">Voltar para login</a></h4>
         <h4 class="volta"><a href="index.php">Voltar pra tela inicial</a></h4>
     </div>
 
+    <script src="js/passVal.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
-<script src="js/javascript.js"></script>
 </html>

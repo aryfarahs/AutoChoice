@@ -107,9 +107,6 @@ form.addEventListener("submit", (event) => {
 
 
 
-
-
-
     // caso esteja tudo certo
     form.submit();
 })

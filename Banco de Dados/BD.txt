@@ -51,8 +51,17 @@ VALUES
 ('Sedan', 'Hyundai', 'Elantra', '2.0L 4-Cilindros', 147, 5, 2024, 70000.00, 5, 6.2, 6, TRUE, 8.0, TRUE, 'Automática', 408, 1.43, 1.80, 4.60, 9.5, 'Gasolina', 'Dianteira', 179, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
 ('Cupê', 'Chevrolet', 'Camaro', '6.2L V8', 455, 4, 2024, 110000.00, 4, 9.8, 6, TRUE, 15.0, TRUE, 'Automática', 258, 1.40, 1.88, 4.78, 4.0, 'Gasolina', 'Traseira', 617, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
 ('Hatchback', 'Ford', 'Focus', '1.5L 3-Cilindros Turbo', 150, 5, 2024, 65000.00, 5, 5.8, 6, TRUE, 7.8, TRUE, 'Automática', 375, 1.45, 1.80, 4.40, 8.9, 'Gasolina', 'Dianteira', 240, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
-('Sedan', 'Toyota', 'Corolla', '1.8L 4-Cilindros', 138, 5, 2024, 72000.00, 5, 5.3, 6, TRUE, 7.0, TRUE, 'Automática', 470, 1.45, 1.78, 4.63, 10.4, 'Gasolina', 'Dianteira', 176, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE);
-
+('Sedan', 'Toyota', 'Corolla', '1.8L 4-Cilindros', 138, 5, 2024, 72000.00, 5, 5.3, 6, TRUE, 7.0, TRUE, 'Automática', 470, 1.45, 1.78, 4.63, 10.4, 'Gasolina', 'Dianteira', 176, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('SUV', 'Nissan', 'X-Trail', '2.5L 4-Cilindros', 181, 7, 2024, 78000.00, 6.0, 8.3, 6, TRUE, 9.0, TRUE, 'Automática', 565, 1.74, 1.83, 4.69, 8.5, 'Gasolina', 'Integral', 245, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Hatchback', 'Peugeot', '208 GT', '1.2L 3-Cilindros Turbo', 130, 5, 2024, 68000.00, 4.5, 6.5, 6, FALSE, 7.9, TRUE, 'Automática', 311, 1.43, 1.74, 4.06, 8.7, 'Gasolina', 'Dianteira', 230, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Sedan', 'Audi', 'A4', '2.0L 4-Cilindros Turbo', 188, 5, 2024, 110000.00, 5.5, 7.5, 8, TRUE, 10.0, TRUE, 'Automática', 480, 1.43, 1.84, 4.73, 7.1, 'Gasolina', 'Integral', 320, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('SUV', 'BMW', 'X3', '2.0L 4-Cilindros Turbo', 248, 5, 2024, 120000.00, 6.2, 8.6, 8, TRUE, 9.5, TRUE, 'Automática', 550, 1.68, 1.89, 4.71, 6.3, 'Gasolina', 'Integral', 350, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Cupê', 'Mercedes-Benz', 'C-Class', '3.0L V6 Turbo', 385, 4, 2024, 130000.00, 5.0, 8.2, 8, TRUE, 12.0, TRUE, 'Automática', 360, 1.40, 1.81, 4.69, 4.7, 'Gasolina', 'Traseira', 520, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('SUV', 'Hyundai', 'Tucson', '2.0L 4-Cilindros', 164, 5, 2024, 75000.00, 5.5, 7.0, 6, TRUE, 8.7, TRUE, 'Automática', 540, 1.65, 1.85, 4.48, 9.3, 'Gasolina', 'Dianteira', 203, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Sedan', 'Kia', 'Optima', '2.4L 4-Cilindros', 185, 5, 2024, 72000.00, 6.0, 7.8, 6, TRUE, 8.3, TRUE, 'Automática', 450, 1.46, 1.86, 4.85, 7.8, 'Gasolina', 'Dianteira', 235, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Cupê', 'Alfa Romeo', 'Giulia', '2.0L 4-Cilindros Turbo', 280, 5, 2024, 100000.00, 6.5, 9.0, 6, TRUE, 10.8, TRUE, 'Automática', 480, 1.41, 1.87, 4.64, 5.7, 'Gasolina', 'Traseira', 306, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('Hatchback', 'Mini', 'Cooper S', '2.0L 4-Cilindros Turbo', 189, 4, 2024, 65000.00, 5.8, 7.3, 6, FALSE, 7.6, TRUE, 'Automática', 278, 1.41, 1.73, 3.85, 6.7, 'Gasolina', 'Dianteira', 280, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+('SUV', 'Subaru', 'Forester', '2.5L 4-Cilindros', 182, 5, 2024, 80000.00, 6.4, 8.5, 8, TRUE, 9.3, TRUE, 'Automática', 505, 1.73, 1.81, 4.63, 8.3, 'Gasolina', 'Integral', 238, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE);
 
 select * from carro;
 

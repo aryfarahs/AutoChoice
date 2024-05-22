@@ -65,9 +65,8 @@
                 ('$categoria', '$marca', '$modelo', '$motor', $potencia, $qntLugares, $ano, $faixaPreco, $consumoEstrada, $consumoCidade, $qntAirbags, $estepe, $notaTesteSegurança, $appleAndroid, '$transmissao', $portaMalas, $altura, $largura, $comprimento, $zeroACem, '$propulsao', '$tracao', $torque, $importado, $cameraRe, $sensorEstacionar, $tetoSolar, $chavePresencial, $farolNeblina);";
 
                 $banco->query($query);
-                require 'header.php';
                 echo "<div class='containerCU'><h2>Novo carro cadastrado com sucesso</h2>";
-                echo "<h4 class='volta'><a href='index.php'>Voltar para tela inicial</a></h4></div>";
+                echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
     
     
             } else {
