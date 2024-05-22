@@ -1,6 +1,6 @@
 <?php
 
-$banco = new mysqli("127.0.0.1", "root", "PUC@1234", "AutoChoice");
+$banco = new mysqli("127.0.0.1", "root", "puc@1234", "AutoChoice");
 
 
 session_start();
