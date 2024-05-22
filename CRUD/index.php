@@ -37,6 +37,11 @@
 
     </style>
 </head>
+<script>
+function confirmDelete() {
+    return confirm('Tem certeza de que deseja excluir este carro?');
+}
+</script>
 <body>
     <?php 
         require 'header.php';
@@ -109,10 +114,8 @@
 
                     echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
-
                     if($_SESSION['tipo'] == 'admin'){
-
-                        echo "<a href='excluir.php?modelo=$objAtual->modelo'><span class='material-symbols-outlined'>close</span></a>";
+                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete()'><span class='material-symbols-outlined'>close</span></a>";
                     }
                     echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
                         echo "<div class='titulo'>";
