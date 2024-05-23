@@ -37,11 +37,27 @@
 
     </style>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    function confirmDelete() {
-        return confirm('Tem certeza de que deseja excluir este carro?');
+    function confirmDelete(url) {
+        Swal.fire({
+            title: "Você tem certeza que deseja excluir? ",
+            text: "Você precisará adiciona-lo novamente!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sim, deletar!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = url;
+            }
+        });
+        return false;
     }
 </script>
+
 <body>
     <?php 
         require 'header.php';
@@ -115,7 +131,7 @@
                     echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
                     if($_SESSION['tipo'] == 'admin'){
-                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete()'><span class='material-symbols-outlined'>close</span></a>";
+                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")'><span class='material-symbols-outlined'>close</span></a>";
                     }
                     echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
                         echo "<div class='titulo'>";
