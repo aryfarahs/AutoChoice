@@ -33,6 +33,12 @@
     a {
         color: white;
     }
+
+    .favoritooo{
+        margin-left: -100px;
+    }
+
+</style>
         
 
     </style>
@@ -133,22 +139,24 @@
                     if($_SESSION['tipo'] == 'admin'){
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")'><span class='material-symbols-outlined'>close</span></a>";
                     }
+                    echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritooo'><span class='material-symbols-outlined'>favorite</span></a>";
+
                     echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
                         echo "<div class='titulo'>";
                             echo "<table class='tabelacard'>";
                                 echo "<tr>";
                                     echo "<td >";
                                         echo "{$objAtual->modelo}";
+                                        
 
                                     echo "</td>";
                                 echo "</tr>";
                             echo "</table>";
                         echo "</div>";
 
-                        echo "<div class='fotoCard'>";
-                        echo "</div>";
+                        echo "<div class='fotoCard'>";echo "</div>";
                     echo "</div>";
-                echo"</a>";
+                    echo"</a>";
             
         }
 

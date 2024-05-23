@@ -218,6 +218,11 @@ a:hover {
     width: 15px;
 }
 
+.titulo {
+    margin-top: -19px;
+}
+
+
 
 .galeria {
     
@@ -292,6 +297,7 @@ a:hover {
 .fav, .hist {
     margin: 15px;
     min-height: 12vh;
+    
     overflow-x: auto;
     border: 1px solid var(--amarelo);
     padding: 2%;
