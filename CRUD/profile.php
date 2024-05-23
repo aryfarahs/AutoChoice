@@ -20,18 +20,11 @@
 
 
 <?php
-    require 'funcoes.php';
+    require 'header.php';
 
 ?>
 
 
-
-
-    <header>
-        <a href="index.php" class="teste">
-            <img src="images/wlogo.png" class="logo" style="width: 15vw;">
-        </a> 
-    </header>
     <main>
         <div class="containerProfile ">
             <div class="cabeca">
@@ -39,11 +32,8 @@
                 <h1><?= "{$_SESSION['usuario']}"?></h1>
                 <a href="settings.php"><img src="images/settings.png" class="conf2"></a>
             </div>
-            <div class="sai">
-                <h4><a href='logout.php'>Sair</a></h4>
-            </div>
             <div class="listas">
-                <div class="fav">
+                <div class="fav" onclick="window.location.href='favoritos.php'">
                     <h3>Favoritos</h3>
                     <div class="card2">
                         <img src="images/xclose.png" class="close">

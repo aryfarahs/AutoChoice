@@ -7,7 +7,7 @@
     <title>Alterar nome</title>
     <style>
         .inline_a {
-                font-size: 1vw;
+                font-size: 16px;
                 color: black;
                 text-align: center; 
                 &:hover {

@@ -11,9 +11,6 @@
     <?php
         require 'header.php';
     ?>
-    <header>
-        <img src="images/wlogo.png" class="logo">
-    </header>
     <main>
 
     </main>

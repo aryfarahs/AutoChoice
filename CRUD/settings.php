@@ -7,7 +7,7 @@
     <title>Settings</title>
     <style>
         .inline_a {
-                font-size: 1vw;
+                font-size: 16px;
                 color: black;
                 &:hover {
                     color: lightgray;

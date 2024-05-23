@@ -283,8 +283,8 @@ a:hover {
 }
 
 .cabeca > a > .conf2 {
-    height: 3vw;
-    width: 3vw;
+    height: 5vw;
+    width: 5vw;
     min-width: 30px;
     min-height: 30px;
 }
@@ -299,6 +299,8 @@ a:hover {
     color: var(--amarelo);
     &:hover {
         text-decoration: none;
+        cursor: pointer;
+        background-color: rgb(241, 241, 241);
     }
 }
 
@@ -307,15 +309,6 @@ a:hover {
     font-weight: bolder;
 }
 
-.card2:hover + .close {
-    display: block;
-    cursor: pointer;
-}
-
-.card2:hover {
-    background-color: rgb(237, 237, 237);
-    cursor: pointer;
-}
 
 .close {
     display: none;
