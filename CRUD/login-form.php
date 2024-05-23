@@ -38,7 +38,9 @@
 </head>
 <body>
     <header>
-        <img src="images/wlogo.png" class="logo">
+        <a href="index.php" class="teste">
+            <img src="images/wlogo.png" class="logo" style="width: 15vw;">
+        </a> 
     </header>
     <main>
         <div class="container">

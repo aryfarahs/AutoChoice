@@ -50,7 +50,9 @@
 </head>
 <body style="min-height: 830px;">
     <header>
-        <img src="images/wlogo.png" class="logo">
+        <a href="index.php" class="teste">
+            <img src="images/wlogo.png" class="logo" style="width: 15vw;">
+        </a> 
     </header>
     <div id="containerCad" class="container" style="height: 570px;">
     <h2>Cadastro</h2>

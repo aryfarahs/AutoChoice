@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-        require 'funcoes.php';
+        require 'header.php';
     ?>
     <header>
         <img src="images/wlogo.png" class="logo">
