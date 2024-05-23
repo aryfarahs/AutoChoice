@@ -28,10 +28,9 @@ logout();
             icon: 'warning',
             title: 'Sessão Expirada',
             text: 'Sua sessão expirou devido à inatividade.',
-            showConfirmButton: true,
-            confirmButtonText: 'OK'
+            timer: 2000,
         }).then(() => {
-            window.location.href = 'index.php';
+            window.location.href = 'login.php';
         });
     <?php } else { ?>
         // Mensagem de logout bem-sucedido
