@@ -40,7 +40,6 @@
         <?php
             require 'funcoes.php';
             ?>
-                
         <div>
             <a href="index.php" class="teste">
                 <img src="images/wlogo.png" class="logo" style="width: 15vw;">
