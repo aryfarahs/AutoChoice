@@ -37,10 +37,8 @@ logout();
         // Mensagem de logout bem-sucedido
         Swal.fire({
             icon: 'success',
-            title: 'Logout Bem-Sucedido',
-            text: 'Você saiu com sucesso.',
-            showConfirmButton: true,
-            confirmButtonText: 'OK'
+            title: 'Você saiu!',
+            timer: 1500,
         }).then(() => {
             window.location.href = 'index.php';
         });
