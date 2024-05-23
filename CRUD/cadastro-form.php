@@ -75,6 +75,7 @@
                 <img src="images/olho.png" id="olhoF2" class="olhoF" onclick="trocaOlho2()">
                 <img src="images/olhoF.png" id="olho2" class="olho" onclick="trocaOlho2()">
             </div>
+            <span class="error" id="senha2Erro">A senha deve ser igual nos dois campos!.</span>
 
             <input type="submit" value="OK" class="envia">
         </form>
