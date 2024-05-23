@@ -35,14 +35,14 @@
         }
 
         .error {
-            display: none; /* Ocultar a mensagem de erro inicialmente */
+            display: none;
             color: red;
-            margin-top: -10px;
+            margin-top: -20px;
             margin-bottom: 10px;
         }
 
         input:invalid + .error {
-            display: block; /* Mostrar a mensagem de erro se o input for inválido */
+            display: block;
         }
 
     </style>
@@ -77,7 +77,7 @@
                 <img src="images/olho.png" id="olhoF2" class="olhoF" onclick="trocaOlho2()">
                 <img src="images/olhoF.png" id="olho2" class="olho" onclick="trocaOlho2()">
             </div>
-            <span class="error" id="senha2Erro">A senha deve ser igual nos dois campos!.</span>
+            <span class="error" id="senha2Erro">A senha deve ser igual nos dois campos!</span>
 
             <input type="submit" value="OK" class="envia">
         </form>

@@ -26,14 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // confirmação de senha
         if (passwordInput.value !== confirmPasswordInput.value) {
             confirmPasswordError.style.display = 'block'
-            containerCad.style.height = '580px';
-            voltarCad.style.marginTop = '190px';
             confirmPasswordInput.focus();
             valid = false;
         } else {
             confirmPasswordError.style.display = 'none';
-            containerCad.style.height = '570px';
-            voltarCad.style.marginTop = '180px';
         }
 
         // Impede o envio do formulário
@@ -63,12 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     confirmPasswordInput.addEventListener('input', () => {
         if (passwordInput.value === confirmPasswordInput.value) {
             confirmPasswordError.style.display = 'none';
-            containerCad.style.height = '570px';
-            voltarCad.style.marginTop = '180px';
+            containerCad.style.height = '620px';
+            voltarCad.style.marginTop = '230px'
         } else {
             confirmPasswordError.style.display = 'block';
-            containerCad.style.height = '580px';
-            voltarCad.style.marginTop = '190px';
         }
     });
 });
