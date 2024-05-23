@@ -21,12 +21,12 @@
         <h2>Alterar senha</h2>
         <form action="alterarsenha.php" method="POST">
 
-            <label for="atual">Senha atual</label>
+            <label for="atual">Senha atual: <span style="color: red;">*</span></label>
             <input type="password" name="atual" id="atual" required>
 
 
             <br><br>
-            <label for="senha">Nova senha:</label>
+            <label for="senha">Nova senha: <span style="color: red;">*</span></label>
             <input type="password" name="senha" id="senha" required>
 
             <br><br>

@@ -21,12 +21,12 @@
         <h2>Alterar nome</h2>
         <form action="alterarnome.php" method="POST">
 
-            <label for="atual">Nome atual:</label>
+            <label for="atual">Nome atual: <span style="color: red;">*</span></label>
             <input type="text" name="atual" id="atual" required>
 
             <br><br>
 
-            <label for="name">Novo nome:</label>
+            <label for="name">Novo nome: <span style="color: red;">*</span></label>
             <input type="text" name="name" id="name" required>
 
             <br><br>

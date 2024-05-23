@@ -57,13 +57,13 @@
     <div id="containerCad" class="container" style="height: 570px;">
     <h2>Cadastro</h2>
         <form action="cadastro.php" method="POST" class="formLOG" id="formCad">
-            <label for="nome">Nome:</label><br>
+            <label for="nome">Nome: <span style="color: red;">*</span></label><br>
             <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="email">Email:</label><br>
+            <label for="email">Email: <span style="color: red;">*</span></label><br>
             <input type="email" id="email" name="email" required><br><br>
 
-            <label for="senha">Senha:</label><br>
+            <label for="senha">Senha: <span style="color: red;">*</span></label><br>
             <div class="divolho">
                 <input type="password" id="senha" name="senha" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[$*&@#_])[A-Za-z\d$*&@#_]{6,}(?!(?:1234|4321))$"><br><br>
                 <img src="images/olho.png" id="olhoF" class="olhoF" onclick="trocaOlho()">
@@ -71,7 +71,7 @@
             </div>
             <span class="error" id="senhaErro">A senha deve ter pelo menos 6 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial ($*&@#_).</span>
 
-            <label for="senha2">Confirmar Senha:</label><br>
+            <label for="senha2">Confirmar Senha: <span style="color: red;">*</span></label><br>
             <div class="divolho">
                 <input type="password" id="senha2" name="senha2" required><br><br>
                 <img src="images/olho.png" id="olhoF2" class="olhoF" onclick="trocaOlho2()">

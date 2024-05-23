@@ -47,10 +47,10 @@
         <h2>Login</h2>
             <form action="login.php" method="POST" class="formLOG">
                 
-                <label for="email">Email:</label><br>
+                <label for="email">Email: <span style="color: red;">*</span></label><br>
                 <input type="email" id="email" name="email" required><br><br>
                 
-                <label for="senha">Senha:</label><br>
+                <label for="senha">Senha: <span style="color: red;">*</span></label><br>
                 <div class="divolho">
                     <input type="password" id="senha" name="senha" required><br></br>
                     <img src="images/olho.png" id="olhoF" class="olhoF" onclick="trocaOlho()">

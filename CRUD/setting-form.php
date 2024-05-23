@@ -11,10 +11,10 @@
     <h2>Login</h2>
         <form action="settings.php" method="POST">
 
-            <label for="name">Nome:</label><br>
+            <label for="name">Nome: <span style="color: red;">*</span></label><br>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="senha">Senha:</label><br>
+            <label for="senha">Senha: <span style="color: red;">*</span></label><br>
             <input type="password" id="senha" name="senha" required><br><br>
 
             <input type="submit" value="OK" class="envia">
