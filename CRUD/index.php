@@ -38,9 +38,9 @@
     </style>
 </head>
 <script>
-function confirmDelete() {
-    return confirm('Tem certeza de que deseja excluir este carro?');
-}
+    function confirmDelete() {
+        return confirm('Tem certeza de que deseja excluir este carro?');
+    }
 </script>
 <body>
     <?php 

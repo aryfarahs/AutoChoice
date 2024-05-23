@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    require 'funcoes.php';
+        require 'header.php';
     
     
     if($_SESSION['tipo'] != 'admin'){
@@ -16,7 +16,6 @@
         echo "<a href='index.php'>Voltar</a>";
     } else {
 
-        require 'header.php';
 
 
         $categoria = $_POST['categoria'] ?? null;

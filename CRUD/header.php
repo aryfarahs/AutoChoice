@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Add carro</title>
     <style>
-        a, h4 {
+        .teste {
             font-size: 1.5vw;
             color: white;
         }
@@ -42,7 +42,7 @@
             ?>
                 
         <div>
-            <a href="index.php">
+            <a href="index.php" class="teste">
                 <img src="images/wlogo.png" class="logo" style="width: 15vw;">
             </a> 
         </div>
@@ -50,13 +50,13 @@
             <?php
 
             if(empty($_SESSION['usuario'])){
-                echo "<a href='login-form.php'>LOGIN</a>";
+                echo "<a href='login-form.php' class='teste'>LOGIN</a>";
             
             } else {
                 echo "
                 <div class=''seilaa>
-                    <h4>Olá, <a href='profile.php'>{$_SESSION['usuario']}</a></h4>
-                    <h4><a href='logout.php'>Sair</a></>
+                    <h4 class='teste'>Olá, <a href='profile.php' class='teste'>{$_SESSION['usuario']}</a></h4>
+                    <h4><a href='logout.php' class='teste'>Sair</a></>
                 </div>";
                 }
 
