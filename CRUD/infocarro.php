@@ -83,9 +83,10 @@
         <div class="editarCarro">
             <img class="imagemzinha" src="images/lupa.png">
             <?php
-                if($_SESSION['tipo'] == 'admin'){
-                echo "<button class='butaozao'>Editar Veículo</button>";
-                }
+
+            if($_SESSION['tipo'] == 'admin'){
+            echo "<a href='editarcarro.php?id_carro=" . $objAtual->id_carro . "' class='butaozao'>Editar Veículo</a>";
+            }
             ?>
             <h4><a href="index.php" style="color: #4C5154;">Voltar pra tela inicial</a></h4>
         </div>
