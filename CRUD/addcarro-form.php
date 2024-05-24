@@ -62,8 +62,8 @@
             <label for="falseEstepe">Não</label>
 
             <br><br>
-            <label for="notaTesteSegurança">Nota no Teste de Segurança: <span style="color: red;">*</span></label>
-            <input type="number" id="notaTesteSegurança" name="notaTesteSegurança" required>
+            <label for="notaTesteSeguranca">Nota no Teste de Segurança: <span style="color: red;">*</span></label>
+            <input type="number" id="notaTesteSeguranca" name="notaTesteSeguranca" required>
 
             <br><br>
             <label for="appleAndroid">Possui Apple CarPlay ou Android Auto? <span style="color: red;">*</span></label><br>
