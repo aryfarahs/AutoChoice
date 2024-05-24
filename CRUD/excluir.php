@@ -1,14 +1,14 @@
 <?php
 
-require 'funcoes.php';
+    require 'funcoes.php';
 
-$modelo = $_GET['modelo'];
+    $modelo = $_GET['modelo'];
 
-$q = "delete from carro where modelo = '$modelo';";
+    $q = "delete from carro where modelo = '$modelo';";
 
-$banco->query($q);
+    $banco->query($q);
 
-header("Location: index.php");
+    header("Location: index.php");
 
 ?>
 
