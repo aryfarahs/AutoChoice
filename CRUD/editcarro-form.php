@@ -21,7 +21,7 @@
             <br><br>
 
             <label for="modelo">Modelo: <span style="color: red;">*</span></label>
-            <input type="text" id="modelo" name="modelo" value="<?php echo $carro->modelo; ?>" disabled>
+            <input type="text" id="modelo" name="modelo" value="<?php echo $carro->modelo; ?>">
             <br><br>
 
             <label for="motor">Motor: <span style="color: red;">*</span></label>
