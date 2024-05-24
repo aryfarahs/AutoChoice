@@ -124,7 +124,8 @@
         $qtd = $resultado->num_rows;
 
         if($qtd == 0){
-            echo "<div class='containerCU' style='min-height:200px; justify-content: center'><h2>Nenhum resultado encontrado</h2></div>"; 
+            echo "<div class='containerCU' style='justify-content: center'><h2>Nenhum resultado encontrado</h2>"; 
+            echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar</a></h4></div>";
         } else {
 
         

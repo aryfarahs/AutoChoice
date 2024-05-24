@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="../js/javascript.js"></script>
     <title>AutoChoice</title>
     <style>
@@ -25,13 +26,10 @@
             /* background-color: blue; */
             display: flex;
             flex-direction: row;
-            
-
             overflow-x: scroll;
-
         }
 
-        .cu {
+        .cu_card{
             border: 1px solid var(--amarelo);
             border-radius: 10px;
             min-width: 120px;
@@ -40,10 +38,39 @@
             min-height: 170px;
             max-height: 1000px;
             margin: 10px;
+
+            display: flex;
+            flex-direction: column;
         }
 
+        .cu_titulo {
+            height: 40px;
+            width: 100%;
+            font-size: medium;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .cu_foto {
+            height: 100%;
+            width: 100%;
 
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            margin-right: 15px;
+            margin-bottom: 5px;
+
+        }
+
+        .material-symbols-outlined {
+
+        }
+        
+        
+      
+        
     </style>
 </head>
 <body>
@@ -91,40 +118,22 @@
 
         for($i = 1; $i <= $qtd; $i++){
             $objAtual = $resultado->fetch_object();
+?>
 
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
-            // echo "<div clas='cu'>";echo "</div>";
+            <div class="cu_card">
+                <div class="cu_titulo">
+                    <?="$objAtual->modelo"?>
 
+                </div>
+                <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
 
+                <span class='material-symbols-outlined'>close</span>
 
+                </div>
 
+            </div>
 
-            // echo "<div class='cu' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
-
-            // echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro' class='cu'>";
-            //             echo "<div class='titulo'>";
-            //                 echo "<table class='tabelacard'>";
-            //                     echo "<tr>";
-            //                         echo "<td >";
-            //                             echo "{$objAtual->modelo}";
-                                        
-
-            //                         echo "</td>";
-            //                     echo "</tr>";
-            //                 echo "</table>";
-            //             echo "</div>";
-
-            //             echo "<div class='fotoCard'>";echo "</div>";
-                    
-            //         echo"</a>";
-
-            
+<?php
         }
 
     ?>
