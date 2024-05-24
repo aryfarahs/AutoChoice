@@ -11,12 +11,13 @@
 }
 
 html, body {
-    min-height: 90vh;
     background-color: var(--branquin);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100%;
 }
 
+body {
+    min-height: 90vh;
+}
 
 
 header {
@@ -375,7 +376,8 @@ td {
 
 footer {
     color: var(--branquin);
-    bottom: 0vh;
+    bottom: 0px;
+    margin-bottom: 0px;
     width: 100%;
 }
 
