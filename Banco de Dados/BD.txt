@@ -35,7 +35,8 @@ CREATE TABLE Carro (
     sensorEstacionar BOOLEAN,
     tetoSolar BOOLEAN,
     chavePresencial BOOLEAN,
-    farolNeblina BOOLEAN
+    farolNeblina BOOLEAN,
+    imagem VARCHAR(2000)
 );
 
 

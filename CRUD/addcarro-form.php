@@ -9,9 +9,14 @@
 <body class="formes">
     <div class="adCar">
     <h2>Adicionar carro</h2>
-    <form action="addcarro.php" method="POST" id="form">
+    <form action="addcarro.php" method="POST" id="form" enctype="multipart/form-data">
 
-        <label for="categoria">Categoria: <span style="color: red;">*</span></label>
+            
+            <label for="imagem"> Selecione a imagem: </label>
+            <input type="file" id="imagem" name="imagem" required>
+            <br><br>
+    
+            <label for="categoria">Categoria: <span style="color: red;">*</span></label>
             <input type="text" id="categoria" name="categoria" required>
             <br><br>
 

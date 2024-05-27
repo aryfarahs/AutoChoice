@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Add carro</title>
+    <title>Add Carro</title>
 </head>
 <body>
     <?php
         require 'header.php';
-    
-        if($_SESSION['tipo'] != 'admin'){
-            echo "Voce nao tem acesso a essa pagina";
+
+        if ($_SESSION['tipo'] != 'admin') {
+            echo "Você não tem acesso a essa página";
             echo "<a href='index.php'>Voltar</a>";
         } else {
+            $imagem = $_FILES['imagem'] ?? null;
             $id_carro = $_POST['id_carro'] ?? null;
             $categoria = $_POST['categoria'] ?? null;
             $marca = $_POST['marca'] ?? null;
@@ -50,19 +51,31 @@
 
             if ($categoria == null || $marca == null || $modelo == null || $motor == null || $potencia == null || $qntLugares == null || $ano == null || $faixaPreco == null || $consumoEstrada == null || $consumoCidade == null || $qntAirbags == null || $estepe == null || $notaTesteSeguranca == null || $appleAndroid == null || $transmissao == null || $portaMalas == null || $altura == null || $largura == null || $comprimento == null || $zeroACem == null || $propulsao == null || $tracao == null || $torque == null || $importado == null || $cameraRe == null || $sensorEstacionar == null || $tetoSolar == null || $chavePresencial == null || $farolNeblina == null) {
                 require 'addcarro-form.php';
-            } else {   
+            } else {
                 if ($resultado->num_rows > 0) {
                     echo "<div class='containerCU'><h2>Erro: Modelo já cadastrado!</h2>";
                     echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4>";
                     echo "<h4 class='volta'><a href='addcarro-form.php' style='color: #4C5154'>Tentar novamente</a></h4></div>";
                 } else {
-                    // Inserção de novo carro
-                    $query = "INSERT INTO Carro (categoria, marca, modelo, motor, potencia, qntLugares, ano, faixaPreco, consumoEstrada, consumoCidade, qntAirbags, estepe, notaTesteSeguranca, appleAndroid, transmissao, portaMalas, altura, largura, comprimento, zeroACem, propulsao, tracao, torque, importado, cameraRe, sensorEstacionar, tetoSolar, chavePresencial, farolNeblina)
-                    VALUES ('$categoria', '$marca', '$modelo', '$motor', $potencia, $qntLugares, $ano, $faixaPreco, $consumoEstrada, $consumoCidade, $qntAirbags, $estepe, $notaTesteSeguranca, $appleAndroid, '$transmissao', $portaMalas, $altura, $largura, $comprimento, $zeroACem, '$propulsao', '$tracao', $torque, $importado, $cameraRe, $sensorEstacionar, $tetoSolar, $chavePresencial, $farolNeblina);";
-
-                    $banco->query($query);
-                    echo "<div class='containerCU'><h2>Novo carro cadastrado com sucesso</h2>";
-                    echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+                    // Processamento do upload da imagem
+                    if ($imagem && $imagem['error'] == 0) {
+                        $diretorioDestino = "images/carros/";
+                        $nomeArquivo = basename($imagem['name']);
+                        $caminhoArquivo = $diretorioDestino . $nomeArquivo;
+                        
+                        if (move_uploaded_file($imagem['tmp_name'], $caminhoArquivo)) {
+                            $query = "INSERT INTO Carro (categoria, marca, modelo, motor, potencia, qntLugares, ano, faixaPreco, consumoEstrada, consumoCidade, qntAirbags, estepe, notaTesteSeguranca, appleAndroid, transmissao, portaMalas, altura, largura, comprimento, zeroACem, propulsao, tracao, torque, importado, cameraRe, sensorEstacionar, tetoSolar, chavePresencial, farolNeblina, imagem)
+                            VALUES ('$categoria', '$marca', '$modelo', '$motor', $potencia, $qntLugares, $ano, $faixaPreco, $consumoEstrada, $consumoCidade, $qntAirbags, $estepe, $notaTesteSeguranca, $appleAndroid, '$transmissao', $portaMalas, $altura, $largura, $comprimento, $zeroACem, '$propulsao', '$tracao', $torque, $importado, $cameraRe, $sensorEstacionar, $tetoSolar, $chavePresencial, $farolNeblina, '$caminhoArquivo');";
+                            
+                            $banco->query($query);
+                            echo "<div class='containerCU'><h2>Novo carro cadastrado com sucesso</h2>";
+                            echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+                        } else {
+                            echo "Erro ao mover o arquivo.";
+                        }
+                    } else {
+                        echo "Nenhum arquivo enviado ou erro no envio.";
+                    }
                 }
             }
         }
@@ -70,37 +83,3 @@
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-    }
-
-
-    ?>
-
-
-
-
-
-
-
-
-</body>
-</html>

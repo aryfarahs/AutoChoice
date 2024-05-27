@@ -9,6 +9,7 @@ if ($_SESSION['tipo'] != 'admin') {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pega os dados do formulário
+    $imagem = $_POST["imagem"];
     $id_carro = $_POST['id_carro'];
     $categoria = $_POST['categoria'];
     $marca = $_POST['marca'];
@@ -42,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Atualiza o banco de dados
     $query = "UPDATE Carro SET 
+        imagem='$_imagem',
         categoria='$categoria', 
         marca='$marca', 
         modelo='$modelo', 
