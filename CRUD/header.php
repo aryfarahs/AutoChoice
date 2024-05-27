@@ -32,7 +32,6 @@
 
     </style>
 </head>
-<body class="formes">
     <header class="containerHeader">
         <div>
             <p>‎ </p>
@@ -62,4 +61,3 @@
             ?>
         </div>
     </header>
-</body>

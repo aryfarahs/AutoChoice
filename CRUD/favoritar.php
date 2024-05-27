@@ -55,12 +55,5 @@ if (empty($_SESSION['email'])) {
 }
 
 ?>
-
-<main>
-
-</main>
-<footer>
-
-</footer>
 </body>
 </html>

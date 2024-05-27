@@ -48,12 +48,5 @@ if ($email == null || $senha == null) {
 ?>
 
 
-
-
-
-
-
-
-
 </body>
 </html>
