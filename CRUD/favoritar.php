@@ -38,16 +38,8 @@ if (empty($_SESSION['email'])) {
     AND c.id_carro = $id_carro;")->num_rows;
 
     if($qtd != 0){
-        echo "<script>
-                swal({
-                    title: 'Aviso!',
-                    text: 'Esse carro já foi favoritado!',
-                    icon: 'warning',
-                    button: 'OK',
-                }).then(function() {
-                    window.location = 'index.php';
-                });
-              </script>";
+        $banco->query("delete from favoritos where id_usuario = $id_usuario AND id_carro = $id_carro;");
+        echo "<script>window.location = 'index.php';</script>";
     } else {
         $banco->query("insert into favoritos (id_usuario, id_carro) values ($id_usuario, $id_carro);");
         echo "<script>window.location = 'index.php';</script>";
