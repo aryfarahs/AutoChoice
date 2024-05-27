@@ -18,12 +18,7 @@
             }
         }
 
-        /* .card2 {
-            background-color: red;
-        } */
-
         .seesus {
-            /* background-color: blue; */
             display: flex;
             flex-direction: row;
             overflow-x: scroll;
@@ -41,6 +36,11 @@
 
             display: flex;
             flex-direction: column;
+
+            &:hover {
+                cursor: pointer;
+                background-color: lightgray;
+            }
         }
 
         .cu_titulo {
@@ -124,17 +124,18 @@
             for($i = 1; $i <= $qtd; $i++){
                 $objAtual = $resultado->fetch_object();
             ?>
-
-                <div class="cu_card">
+                <?php
+                    echo "<div class='cu_card' onclick='window.location.href='infocarro.php?modelo=$objAtual->modelo'>"
+                ?>
                     <div class="cu_titulo">
                         <?="$objAtual->modelo"?>
                     </div>
-                    
-                    <a href=""><div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
+                
+                    <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
                         <?php echo "<span class='material-symbols-outlined'><a href='favDes.php?id_carro=$objAtual->id_carro' class='vazio'>close</span></a>"?>
-                    </div></a>
-
+                    </div>
                 </div>
+
 
         <?php
             }

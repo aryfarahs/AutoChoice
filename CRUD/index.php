@@ -121,7 +121,7 @@
                OR imagem LIKE '%$cu%'");
         }
 
-        $qtd = $resultado->num_rows;
+        $qtd = $resultado->num_rows; 
         
         if($qtd == 0){
             echo "<div class='containerCU' style='justify-content: center'><h2>Nenhum resultado encontrado</h2>"; 
@@ -129,9 +129,6 @@
         } else {
 
         echo "<div class='galeria'>";
-
-        $modelo = $_GET['modelo'] ?? null;
-        $qtdFav = $banco->query("SELECT * FROM carro WHERE modelo LIKE '$modelo';")->num_rows;
 
         for($i = 1; $i <= $qtd; $i++){
             $objAtual = $resultado->fetch_object();
@@ -142,12 +139,11 @@
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
                     }
 
-
-                    if($qtdFav > 0) {
+                    if(5 > 0) {
                         echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 
                         'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     } else {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 1    , 'wght' 400, 
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #ffc000; font-variation-settings: 'FILL' 1    , 'wght' 400, 
                         'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     }
                     
@@ -174,7 +170,7 @@
         }
 
         if($_SESSION['tipo'] == 'admin'){
-            echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
+            echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center; margin: auto;'";
 
             echo "</div>";
         }

@@ -161,7 +161,7 @@
             <label for="falseFarolNeblina">Não</label>
     
             <br><br>
-            <input type="submit" value="Salvar" id="salva">
+            <input type="submit" value="Salvar" id="envia">
     </form>
     <h4 class="volta"><a href="index.php">Voltar pra tela inicial</a></h4>
 </div>
