@@ -9,7 +9,6 @@ if ($_SESSION['tipo'] != 'admin') {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Pega os dados do formulário
-    $imagem = $_POST["imagem"];
     $id_carro = $_POST['id_carro'];
     $categoria = $_POST['categoria'];
     $marca = $_POST['marca'];
@@ -41,46 +40,100 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $chavePresencial = $_POST['chavePresencial'];
     $farolNeblina = $_POST['farolNeblina'];
 
-    // Atualiza o banco de dados
-    $query = "UPDATE Carro SET 
-        imagem='$_imagem',
-        categoria='$categoria', 
-        marca='$marca', 
-        modelo='$modelo', 
-        motor='$motor', 
-        potencia='$potencia', 
-        qntLugares='$qntLugares', 
-        ano='$ano', 
-        faixaPreco='$faixaPreco', 
-        consumoEstrada='$consumoEstrada', 
-        consumoCidade='$consumoCidade', 
-        qntAirbags='$qntAirbags', 
-        estepe='$estepe', 
-        notaTesteSeguranca='$notaTesteSeguranca', 
-        appleAndroid='$appleAndroid', 
-        transmissao='$transmissao', 
-        portaMalas='$portaMalas', 
-        altura='$altura', 
-        largura='$largura', 
-        comprimento='$comprimento', 
-        zeroACem='$zeroACem', 
-        propulsao='$propulsao', 
-        tracao='$tracao', 
-        torque='$torque', 
-        importado='$importado', 
-        cameraRe='$cameraRe', 
-        sensorEstacionar='$sensorEstacionar', 
-        tetoSolar='$tetoSolar', 
-        chavePresencial='$chavePresencial', 
-        farolNeblina='$farolNeblina' 
-        WHERE id_carro='$id_carro'";
+    // Processa a nova imagem, se foi enviada
+    if ($_FILES['nova_imagem']['error'] == 0) {
+        $diretorioDestino = "images/carros/";
+        $nomeArquivo = basename($_FILES['nova_imagem']['name']);
+        $caminhoArquivo = $diretorioDestino . $nomeArquivo;
+        
+        if (move_uploaded_file($_FILES['nova_imagem']['tmp_name'], $caminhoArquivo)) {
+            // Atualiza o caminho da nova imagem no banco de dados
+            $query = "UPDATE Carro SET 
+                imagem='$caminhoArquivo',
+                categoria='$categoria', 
+                marca='$marca', 
+                modelo='$modelo', 
+                motor='$motor', 
+                potencia='$potencia', 
+                qntLugares='$qntLugares', 
+                ano='$ano', 
+                faixaPreco='$faixaPreco', 
+                consumoEstrada='$consumoEstrada', 
+                consumoCidade='$consumoCidade', 
+                qntAirbags='$qntAirbags', 
+                estepe='$estepe', 
+                notaTesteSeguranca='$notaTesteSeguranca', 
+                appleAndroid='$appleAndroid', 
+                transmissao='$transmissao', 
+                portaMalas='$portaMalas', 
+                altura='$altura', 
+                largura='$largura', 
+                comprimento='$comprimento', 
+                zeroACem='$zeroACem', 
+                propulsao='$propulsao', 
+                tracao='$tracao', 
+                torque='$torque', 
+                importado='$importado', 
+                cameraRe='$cameraRe', 
+                sensorEstacionar='$sensorEstacionar', 
+                tetoSolar='$tetoSolar', 
+                chavePresencial='$chavePresencial', 
+                farolNeblina='$farolNeblina' 
+                WHERE id_carro='$id_carro'";
 
-    if ($banco->query($query)) {
-        echo "<div class='containerCU'><h2>Carro atualizado com sucesso</h2>";
-        echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+            if ($banco->query($query)) {
+                echo "<div class='containerCU'><h2>Carro atualizado com sucesso</h2>";
+                echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+            } else {
+                echo "<div class='containerCU'><h2>Erro ao atualizar o carro: " . $banco->error . "</h2>";
+                echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+            }
+
+        } else {
+            echo "<div class='containerCU'><h2>Erro ao mover o arquivo da imagem.</h2>";
+            echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+        }
     } else {
-        echo "<div class='containerCU'><h2>Erro ao atualizar o carro: " . $banco->error . "</h2>";
-        echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+        // Se nenhuma nova imagem foi enviada, atualiza apenas os dados sem mexer na imagem
+        $query = "UPDATE Carro SET 
+            categoria='$categoria', 
+            marca='$marca', 
+            modelo='$modelo', 
+            motor='$motor', 
+            potencia='$potencia', 
+            qntLugares='$qntLugares', 
+            ano='$ano', 
+            faixaPreco='$faixaPreco', 
+            consumoEstrada='$consumoEstrada', 
+            consumoCidade='$consumoCidade', 
+            qntAirbags='$qntAirbags', 
+            estepe='$estepe', 
+            notaTesteSeguranca='$notaTesteSeguranca', 
+            appleAndroid='$appleAndroid', 
+            transmissao='$transmissao', 
+            portaMalas='$portaMalas', 
+            altura='$altura', 
+            largura='$largura', 
+            comprimento='$comprimento', 
+            zeroACem='$zeroACem', 
+            propulsao='$propulsao', 
+            tracao='$tracao', 
+            torque='$torque', 
+            importado='$importado', 
+            cameraRe='$cameraRe', 
+            sensorEstacionar='$sensorEstacionar', 
+            tetoSolar='$tetoSolar', 
+            chavePresencial='$chavePresencial', 
+            farolNeblina='$farolNeblina' 
+            WHERE id_carro='$id_carro'";
+
+        if ($banco->query($query)) {
+            echo "<div class='containerCU'><h2>Carro atualizado com sucesso</h2>";
+            echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+        } else {
+            echo "<div class='containerCU'><h2>Erro ao atualizar o carro: " . $banco->error . "</h2>";
+            echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
+        }
     }
 } else {
     // Exibe o formulário preenchido para edição
@@ -102,6 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar para tela inicial</a></h4></div>";
     }
 }
+
 ?>
+
 </body>
 </html>

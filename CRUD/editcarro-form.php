@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Add carro</title>
+    <title>EDITAR carro</title>
 </head>
 <body class="formes">
     <div class="adCar">
     <h2>Editar carro</h2>
-    <form action="editarcarro.php" method="POST" id="formEdit">
-        <input type="hidden" name="id_carro" value="<?php echo $carro->id_carro; ?>">
 
-        <label for="categoria">Categoria: <span style="color: red;">*</span></label>
+    <form action="editarcarro.php" method="POST"  enctype="multipart/form-data" id="formEdit">
+    
+            <input type="hidden" name="id_carro" value="<?php echo $carro->id_carro; ?>">
+            <!-- Campo para mostrar a imagem atual -->
+            <img src="<?php echo $carro->imagem; ?>" alt="Imagem do carro" style="max-width: 200px;"><br>
+            <!-- Campo para fazer upload da nova imagem -->
+            <label for="nova_imagem">Nova Imagem:</label>
+            <input type="file" name="nova_imagem" id="nova_imagem"><br>
+            
+        
+
+            <label for="categoria">Categoria: <span style="color: red;">*</span></label>
             <input type="text" id="categoria" name="categoria" value="<?php echo $carro->categoria; ?>">
             <br><br>
 

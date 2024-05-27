@@ -117,7 +117,8 @@
                OR sensorEstacionar LIKE '%$cu%'
                OR tetoSolar LIKE '%$cu%'
                OR chavePresencial LIKE '%$cu%'
-               OR farolNeblina LIKE '%$cu%'");
+               OR farolNeblina LIKE '%$cu%'
+               OR imagem LIKE '%$cu%'");
         }
 
         $qtd = $resultado->num_rows;
@@ -135,7 +136,7 @@
         for($i = 1; $i <= $qtd; $i++){
             $objAtual = $resultado->fetch_object();
 
-                    echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
+                    echo "<div class='card' style='background-image: url($objAtual->imagem); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
                     if($_SESSION['tipo'] == 'admin'){
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
