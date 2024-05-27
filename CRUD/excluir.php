@@ -4,11 +4,27 @@
 
     $modelo = $_GET['modelo'];
 
-    $q = "delete from carro where modelo = '$modelo';";
+    // $q1 = "delete from carro where modelo = '$modelo';";
+    // $banco->query($q);
+    // header("Location: index.php");
 
-    $banco->query($q);
+    $banco->begin_transaction();
 
-    header("Location: index.php");
+    try {
+        $q = "DELETE FROM carro WHERE modelo = '$modelo';";
+        $banco->query($q);
+
+        $banco->commit();
+
+
+        header("Location: index.php");
+
+    } catch (Exception $e) {
+        // Reverter a transação em caso de erro
+        $banco->rollback();
+        echo "Erro ao deletar: " . $e->getMessage();
+    }
+
 
 ?>
 

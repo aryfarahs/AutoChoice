@@ -100,7 +100,7 @@ CREATE TABLE Favoritos (
     id_usuario INT,
     id_carro INT,
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),
-    FOREIGN KEY (id_carro) REFERENCES Carro(id_carro)
+    FOREIGN KEY (id_carro) REFERENCES Carro(id_carro) ON DELETE CASCADE
 );
 
 
