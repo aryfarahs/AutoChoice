@@ -8,14 +8,42 @@
     <title>AutoChoice</title>
     <style>
 
-    .material-symbols-outlined {
+    .material-symbols-outlined  {
         margin-top: 140px;
         margin-left: 120px;
         position: absolute;
-        color: grey;
 
         &:hover {
             color: black;
+            font-weight: bold;
+            /* background-color: red; */
+        }
+    }
+
+    .closeee {
+        color: gray;
+        &:hover {
+            color: darkgray;
+        }
+    }
+
+    .favoritooo {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;  
+    }
+
+    .favoritadooo {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+        color: #ffc000;
+        &:hover {
+            color: #ffc0ee;
             font-weight: bold;
             /* background-color: red; */
         }
@@ -34,14 +62,12 @@
         color: white;
     }
 
-    .favoritooo{
+    .favoritooo {
         margin-left: -100px;
     }
 
 </style>
         
-
-    </style>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -138,10 +164,16 @@
                     echo "<div class='card' style='background-image: url(images/carros/$objAtual->id_carro.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
                     if($_SESSION['tipo'] == 'admin'){
-                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")'><span class='material-symbols-outlined'>close</span></a>";
+                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
                     }
-                    echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritooo'><span class='material-symbols-outlined'>favorite</span></a>";
 
+                    if(5 != 0) {
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritooo'><span class='material-symbols-outlined'>favorite</span></a>";
+                    } else {
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritadooo'><span class='material-symbols-outlined'>favorite</span></a>";
+                    }
+                    
+                    
                     echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
                         echo "<div class='titulo'>";
                             echo "<table class='tabelacard'>";
