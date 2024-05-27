@@ -12,11 +12,9 @@
         margin-top: 140px;
         margin-left: 120px;
         position: absolute;
-
         &:hover {
             color: black;
             font-weight: bold;
-            /* background-color: red; */
         }
     }
 
@@ -27,27 +25,6 @@
         }
     }
 
-    .favoritooo {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;  
-    }
-
-    .favoritadooo {
-        font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-        color: #ffc000;
-        &:hover {
-            color: #ffc0ee;
-            font-weight: bold;
-            /* background-color: red; */
-        }
-    }
 
 
     .head {
@@ -62,9 +39,6 @@
         color: white;
     }
 
-    .favoritooo {
-        margin-left: -100px;
-    }
 
 </style>
         
@@ -167,10 +141,14 @@
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
                     }
 
+                    $qtd = $banco->query("select * FROM favoritos AS f")->num_rows;
+
                     if(5 != 0) {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritooo'><span class='material-symbols-outlined'>favorite</span></a>";
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 
+                        'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     } else {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' class='favoritadooo'><span class='material-symbols-outlined'>favorite</span></a>";
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 1    , 'wght' 400, 
+                        'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     }
                     
                     
@@ -196,7 +174,7 @@
         }
 
         if($_SESSION['tipo'] == 'admin'){
-            echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/carros/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
+            echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'";
 
             echo "</div>";
         }

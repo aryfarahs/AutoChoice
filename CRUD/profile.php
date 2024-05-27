@@ -10,17 +10,17 @@
     <style>
         .vazio {
             text-decoration: none;
+            color: #ffc000;
             &:hover {
                 text-decoration: none;
-                background-color: black;
+                color: #eeb000;
+                font-weight: bold;
             }
         }
 
         /* .card2 {
             background-color: red;
         } */
-
-        
 
         .seesus {
             /* background-color: blue; */
@@ -63,13 +63,15 @@
             margin-bottom: 5px;
 
         }
-
-        .material-symbols-outlined {
-
+               
+        .anyFav {
+            display: flex;
+            color: black;
+            text-align: center;
+            margin: 70px auto;
+            justify-content: center;
+            font-weight: lighter;
         }
-        
-        
-      
         
     </style>
 </head>
@@ -115,37 +117,33 @@
 
         $qtd = $resultado->num_rows;
 
+        if($qtd == 0) {
+            echo "<h5 class='anyFav' style='justify-content: center'>Nenhum veículo favoritado</h5>";
+        } else {
 
-        for($i = 1; $i <= $qtd; $i++){
-            $objAtual = $resultado->fetch_object();
-?>
+            for($i = 1; $i <= $qtd; $i++){
+                $objAtual = $resultado->fetch_object();
+            ?>
 
-            <div class="cu_card">
-                <div class="cu_titulo">
-                    <?="$objAtual->modelo"?>
+                <div class="cu_card">
+                    <div class="cu_titulo">
+                        <?="$objAtual->modelo"?>
+                    </div>
+                    <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
+                        <?php echo "<span class='material-symbols-outlined'><a href='favDes.php?id_carro=$objAtual->id_carro' class='vazio'>close</span></a>"?>
+                    </div>
 
                 </div>
-                <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
 
-                <span class='material-symbols-outlined'>close</span>
-
-                </div>
-
-            </div>
-
-<?php
+        <?php
+            }
         }
-
-    ?>
+        ?>
                     
 
                     </div>
-
-
-
-            
                 </div>
-            
+    
                 <div class="hist">
                     <h3>Histórico</h3>
                     <div class="card2">

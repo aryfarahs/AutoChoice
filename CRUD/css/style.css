@@ -305,11 +305,6 @@ a:hover {
     padding: 2%;
     border-radius: 5px;
     color: var(--amarelo);
-    &:hover {
-        text-decoration: none;
-        cursor: pointer;
-        background-color: rgb(241, 241, 241);
-    }
 }
 
 .fav, .hist > h3 {
