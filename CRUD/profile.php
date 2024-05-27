@@ -129,9 +129,10 @@
                     <div class="cu_titulo">
                         <?="$objAtual->modelo"?>
                     </div>
-                    <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
+                    
+                    <a href=""><div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
                         <?php echo "<span class='material-symbols-outlined'><a href='favDes.php?id_carro=$objAtual->id_carro' class='vazio'>close</span></a>"?>
-                    </div>
+                    </div></a>
 
                 </div>
 
