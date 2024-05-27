@@ -186,7 +186,7 @@
         ?>
 
     </main>
-    <footer>
+    <footer id="footerIndex">
         <h5>Todos os diretos reservados - AutoChoice</h5>
     </footer>
 </body>

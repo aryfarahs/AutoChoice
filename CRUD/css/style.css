@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    min-height: 90vh;
+    min-height: 60vh;
     overflow-x: hidden;
 }
 
@@ -379,7 +379,7 @@ td {
 footer {
     color: var(--branquin);
     bottom: 0px;
-    margin-bottom: 0px;
+    margin-top: 20vh;
     width: 100%;
 }
 
