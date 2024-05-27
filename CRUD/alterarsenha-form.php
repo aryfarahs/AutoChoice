@@ -38,9 +38,5 @@
         <h4><a href="index.php" class="inline_a">Voltar pra tela inicial</a></h4>
     </div>
 
-    
-
-
-
 </body>
 </html>

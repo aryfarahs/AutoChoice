@@ -42,13 +42,7 @@ if ($email == null || $senha == null || $nome == null) {
     }
 }
 
-    
-
-
 ?>
-
-
-
 
 </body>
 </html>

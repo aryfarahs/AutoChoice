@@ -125,6 +125,7 @@ a:hover {
     box-shadow: 1px 1px 10px 1px lightgray;
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 50px;
     background-color: #F7F9F9;
 }
 
@@ -347,6 +348,7 @@ a:hover {
     padding: 10px;
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 50px;
     border-radius: 10px;
     background-color: #F7F9F9;
 }
@@ -379,9 +381,18 @@ td {
 footer {
     color: var(--branquin);
     bottom: 0px;
-    margin-top: 20vh;
+    margin-top: 30px;
     width: 100%;
 }
+
+footer#footerIndexADM {
+    margin-top: 11.8vh;
+}
+
+footer#footerIndex {
+    margin-top: 21%;
+}
+
 
 footer > h5 {
     background-color: var(--cinza-escuro);

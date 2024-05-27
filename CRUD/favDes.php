@@ -24,11 +24,5 @@ require 'funcoes.php';
 
 ?>
 
-<main>
-
-</main>
-<footer>
-
-</footer>
 </body>
 </html>

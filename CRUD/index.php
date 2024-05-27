@@ -186,8 +186,19 @@
         ?>
 
     </main>
-    <footer id="footerIndex">
-        <h5>Todos os diretos reservados - AutoChoice</h5>
-    </footer>
+    <?php
+    
+        if($_SESSION['tipo'] == 'admin'){
+            echo "<footer id='footerIndexADM'>
+                    <h5>Todos os diretos reservados - AutoChoice</h5>
+                  </footer>";
+        } else {
+            echo "<footer id='footerIndex'>
+                    <h5>Todos os diretos reservados - AutoChoice</h5>
+                  </footer>";
+        }
+    
+    ?>
+    
 </body>
 </html>
