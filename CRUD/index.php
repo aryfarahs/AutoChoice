@@ -141,8 +141,6 @@
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
                     }
 
-                    $qtd = $banco->query("select * FROM favoritos AS f")->num_rows;
-
                     if(5 != 0) {
                         echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 
                         'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
