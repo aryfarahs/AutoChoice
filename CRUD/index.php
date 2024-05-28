@@ -72,21 +72,16 @@
     
         <form action="" class="forml">
             <input type="type" name="search" placeholder="O que deseja ver?" class="txt" id="forml">
-
             <button type="submit" class="search"><img src="images/lupa.png" class="lupa"></button>
         </form> 
 
 
         <?php
-
+        $resultado = null;
         if(!isset($_GET['search'])){
-        $resultado = $banco->query("select * FROM carro;");
-
+            $resultado = $banco->query("select * FROM carro;");
         } else {
-
-
             $cu = $_GET['search'];
-
             $resultado = $banco->query("select *
             FROM carro
             WHERE categoria LIKE '%$cu%'
@@ -121,13 +116,18 @@
                OR imagem LIKE '%$cu%'");
         }
 
-        $email = $_SESSION['email'];
-        $id_usuario = $banco->query("select * from usuario where email = '$email';")->fetch_object()->id_usuario;
-    
-        $favoritos = $banco->query("Select * FROM favoritos AS f
-        INNER JOIN usuario AS u ON f.id_usuario = u.id_usuario
-        INNER JOIN carro AS c ON f.id_carro = c.id_carro
-        WHERE u.id_usuario = $id_usuario;");
+        $favoritos = [];
+        if(isset($_SESSION['email'])){
+            $email = $_SESSION['email'];
+            $id_usuario_query = $banco->query("SELECT * FROM usuario WHERE email = '$email';");
+            if($id_usuario_query->num_rows > 0) {
+                $id_usuario = $id_usuario_query->fetch_object()->id_usuario;
+                $favoritos_result = $banco->query("SELECT * FROM favoritos WHERE id_usuario = $id_usuario;");
+                while($fav = $favoritos_result->fetch_object()) {
+                    $favoritos[] = $fav->id_carro;
+                }
+            }
+        }
 
         $qtd = $resultado->num_rows; 
         
@@ -136,47 +136,43 @@
             echo "<h4 class='volta'><a href='index.php' style='color: #4C5154'>Voltar</a></h4></div>";
         } else {
 
-        echo "<div class='galeria'>";
+            echo "<div class='galeria'>";
 
-        for($i = 1; $i <= $qtd; $i++){
-            $objAtual = $resultado->fetch_object();
+            for($i = 1; $i <= $qtd; $i++){
+                $objAtual = $resultado->fetch_object();
+                echo "<div class='card' style='background-image: url($objAtual->imagem); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
 
-                    echo "<div class='card' style='background-image: url($objAtual->imagem); background-repeat: no-repeat ; background-size: contain; background-position: center center'>";
+                if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'admin'){
+                    echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
+                }
 
-                    if($_SESSION['tipo'] == 'admin'){
-                        echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
-                    }
+                $isFavorite = in_array($objAtual->id_carro, $favoritos);
+                $favoriteIconColor = $isFavorite ? '#ffc000' : '#808080';
+                $favoriteIconFill = $isFavorite ? 1 : 0;
+                echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: $favoriteIconColor; font-variation-settings: \"FILL\" $favoriteIconFill, \"wght\" 400, \"GRAD\" 0, \"opsz\" 24;'>favorite</span></a>";             
+                
+                echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
+                    echo "<div class='titulo'>";
+                        echo "<table class='tabelacard'>";
+                            echo "<tr>";
+                                echo "<td >";
+                                    echo "{$objAtual->modelo}";
+                                    
 
-                    
-                    if($favoritos->num_rows == 0) {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
-                    } else {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #ffc000; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
-                    }
-                    
-                    
-                    echo"<a href='infoCarro.php?id_carro=$objAtual->id_carro'>";
-                        echo "<div class='titulo'>";
-                            echo "<table class='tabelacard'>";
-                                echo "<tr>";
-                                    echo "<td >";
-                                        echo "{$objAtual->modelo}";
-                                        
-
-                                    echo "</td>";
-                                echo "</tr>";
-                            echo "</table>";
-                        echo "</div>";
-
-                        echo "<div class='fotoCard'>";echo "</div>";
+                                echo "</td>";
+                            echo "</tr>";
+                        echo "</table>";
                     echo "</div>";
-                    echo"</a>";
-            
-        }
+
+                    echo "<div class='fotoCard'>";echo "</div>";
+                echo "</div>";
+                echo"</a>";
+        
+            }
 
         }
 
-        if($_SESSION['tipo'] == 'admin'){
+        if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'admin'){
             echo "<a href='addcarro.php'><div class='card' id='infoCarro' style='background-image: url(images/plus.png); background-repeat: no-repeat ; background-size: contain; background-position: center center; margin: auto;'";
 
             echo "</div>";
@@ -192,7 +188,7 @@
     </main>
     <?php
     
-        if($_SESSION['tipo'] == 'admin'){
+        if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'admin'){
             echo "<footer id='footerIndexADM'>
                     <h5>Todos os diretos reservados - AutoChoice</h5>
                   </footer>";

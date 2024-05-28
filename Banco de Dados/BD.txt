@@ -157,6 +157,6 @@ SELECT id_usuario from usuario where email = 'icarolk@gmail.com';
   USE autochoice;
   
   SELECT * FROM usuario;
-  SELECT * FROM carro;
+  select * from carro;
   SELECT * FROM Favoritos;
   

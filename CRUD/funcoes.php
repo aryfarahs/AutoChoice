@@ -16,7 +16,7 @@ if (!(isset($_SESSION['usuario']))) {
     $_SESSION['email'] = '';
     $_SESSION['tipo'] = '';
 } 
-$session_timeout = 50000;
+$session_timeout = 300;
 
 // Verificar se o usuário está logado
 if (isset($_SESSION['usuario']) && $_SESSION['usuario'] != '') {
