@@ -14,7 +14,6 @@
                     color: lightgray;
                 }
             }
-        </style>
 </head>
 <body>
 <?php
