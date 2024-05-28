@@ -62,7 +62,7 @@
         .imagemzinha {
             margin: auto;
             min-width: 10vw;
-            max-width: 500px;
+            max-width: 30vw;
         }
 
 
