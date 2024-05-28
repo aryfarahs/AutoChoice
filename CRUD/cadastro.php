@@ -15,16 +15,15 @@ require 'funcoes.php';
     $email = $_POST['email'] ?? null;
     $senha = $_POST['senha'] ?? null;
     $nome = $_POST['nome'] ?? null;
-    $ano = $_POST['ano'] ?? null;
 
-if ($email == null || $senha == null || $nome == null || $ano == null) {
+if ($email == null || $senha == null || $nome == null) {
     require 'cadastro-form.php';
 } else {
-    if(($banco->query("SELECT id_usuario, nome_usuario, email, senha, tipo, ano FROM usuario WHERE email = '$email'")->num_rows) == 0){
+    if(($banco->query("SELECT id_usuario, nome_usuario, email, senha, tipo FROM usuario WHERE email = '$email'")->num_rows) == 0){
         
         $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
         
-        $query = "INSERT INTO usuario (nome_usuario, email, senha, tipo, ano) VALUES ('$nome', '$email', '$senhaCriptografada', 'normal', '$ano');";
+        $query = "INSERT INTO usuario (nome_usuario, email, senha, tipo) VALUES ('$nome', '$email', '$senhaCriptografada', 'normal');";
     
         $banco->query($query);
         // Validação poderia ser feita aqui
@@ -36,7 +35,6 @@ if ($email == null || $senha == null || $nome == null || $ano == null) {
         unset($_SESSION['nome']);
         unset($_SESSION['email']);
         unset($_SESSION['tipo']);
-        unset($_SESSION['ano']);
         session_unset();
         session_destroy();
         require 'login.php';

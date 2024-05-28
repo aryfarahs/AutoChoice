@@ -15,7 +15,6 @@ if (!(isset($_SESSION['usuario']))) {
     $_SESSION['nome'] = '';
     $_SESSION['email'] = '';
     $_SESSION['tipo'] = '';
-    // $_SESSION['telefone'] == '';
 } 
 $session_timeout = 300;
 

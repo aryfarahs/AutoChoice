@@ -63,12 +63,6 @@
             <label for="email">Email: <span style="color: red;">*</span></label><br>
             <input type="email" id="email" name="email" required><br><br>
 
-
-            <label for="ano">ano: <span style="color: red;">*</span></label><br>
-            <input type="number" id="ano" name="ano" required><br><br>
-
-
-
             <label for="senha">Senha: <span style="color: red;">*</span></label><br>
             <div class="divolho">
                 <input type="password" id="senha" name="senha" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[$*&@#_])[A-Za-z\d$*&@#_]{6,}(?!(?:1234|4321))$"><br><br>
