@@ -88,6 +88,27 @@
             <div class="cabeca">
                 <img src="images/profile.png" alt="">
                 <h1><?= "{$_SESSION['usuario']}"?></h1>
+                <h4><?php 
+
+
+            $resultado = $banco->query("select ano FROM usuario where nome_usuario = '{$_SESSION['usuario']}';");
+
+            $objAtual = $resultado->fetch_object();
+
+            echo "Ano: $objAtual->ano";
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                ?></h4>
                 <a href="settings.php"><img src="images/settings.png" class="conf2"></a>
             </div>
             <div class="listas">
