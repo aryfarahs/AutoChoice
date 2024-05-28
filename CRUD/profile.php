@@ -61,7 +61,6 @@
             align-items: end;
             margin-right: 15px;
             margin-bottom: 5px;
-
         }
                
         .anyFav {
@@ -123,18 +122,17 @@
 
             for($i = 1; $i <= $qtd; $i++){
                 $objAtual = $resultado->fetch_object();
+
+                echo "<div class='cu_card' onclick=\"window.location.href='infocarro.php?id_carro=$objAtual->id_carro'\">";
             ?>
-                <?php
-                    echo "<div class='cu_card' onclick='window.location.href='infocarro.php?modelo=$objAtual->modelo'>"
-                ?>
-                    <div class="cu_titulo">
-                        <?="$objAtual->modelo"?>
+                        <div class="cu_titulo">
+                            <?="$objAtual->modelo"?>
+                        </div>
+                    
+                        <div class="cu_foto" style='background-image: url(<?="$objAtual->imagem"?>); background-repeat: no-repeat ; background-size: contain; background-position: center center;'>
+                            <?php echo "<span class='material-symbols-outlined'><a href='favDes.php?id_carro=$objAtual->id_carro' class='vazio'>close</span></a>"?>
+                        </div>
                     </div>
-                
-                    <div class="cu_foto" style='background-image: url(images/carros/<?="$objAtual->id_carro"?>.png); background-repeat: no-repeat ; background-size: contain; background-position: center center'>
-                        <?php echo "<span class='material-symbols-outlined'><a href='favDes.php?id_carro=$objAtual->id_carro' class='vazio'>close</span></a>"?>
-                    </div>
-                </div>
 
 
         <?php

@@ -8,6 +8,7 @@
         .tabelaInfo {
             overflow-x: scroll;
             width: 40vw;
+            box-shadow: 0px 0px 10px 4px lightgray;
         }
 
         .tabelaInfo table {
@@ -18,11 +19,16 @@
             text-align: left;
             padding: 5px;
             border: 1px solid black;
+            &:hover {
+                background-color: #ffc01d;
+                color: #121517;
+            }
         }
         
-        .altern {
+        .title {
             background-color: lightgray;
         }
+
 
         .superContainer {
             display: flex;
@@ -32,7 +38,6 @@
         }
 
         .editarCarro {
-
             width: 35vw;
             text-align: center;
             display: flex;
@@ -49,15 +54,15 @@
             color: white;
             margin-top: 30px;
             &:hover {
-                background-color: #FFB000;
+                background-color: #ffdc74;;
                 cursor: pointer;
             }
         }
 
         .imagemzinha {
             margin: auto;
-            width: 30vw;
-            max-width: 300px;
+            min-width: 10vw;
+            max-width: 500px;
         }
 
 
@@ -81,7 +86,7 @@
     ?>
     <div class="superContainer">
         <div class="editarCarro">
-            <img class="imagemzinha" src="images/lupa.png">
+            <img class="imagemzinha" src="<?=$objAtual->imagem?>">
             <?php
 
             if($_SESSION['tipo'] == 'admin'){
@@ -92,90 +97,92 @@
         </div>
         <div class="tabelaInfo">
             <table>
-                <tr>
-                    <td class="altern">Categoria</td>
+                <tr class="title">
+                    <td>Categoria</td>
                     <td><?php echo "$objAtual->categoria";?></td>
-                    <td class="altern">Quantidade de Airbags</td>
+                    <td>Quantidade de Airbags</td>
                     <td><?php echo "$objAtual->qntAirbags";?></td>  
                 </tr>
                 <tr>
-                    <td class="altern">Marca</td>
+                    <td>Marca</td>
                     <td><?php echo "$objAtual->marca";?></td>
-                    <td class="altern">Estepe</td>
+                    <td>Estepe</td>
                     <td><?php echo "$objAtual->estepe";?></td>
                 </tr>
-                <tr>
-                    <td class="altern">Modelo</td>
+                <tr class="title">
+                    <td>Modelo</td>
                     <td><?php echo "$objAtual->modelo";?></td>
-                    <td class="altern">Nota no Teste de Segurança</td>
+                    <td>Nota no Teste de Segurança</td>
                     <td><?php echo "$objAtual->notaTesteSeguranca";?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Motor</td>
+                    <td>Motor</td>
                     <td><?php echo "$objAtual->motor";?></td>
-                    <td class="altern">Compatibilidade Apple/Android</td>
+                    <td>Compatibilidade Apple/Android</td>
                     <td><?php if ("$objAtual->appleAndroid" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
-                <tr>
-                    <td class="altern">Potência</td>
+                <tr class="title">
+                    <td>Potência</td>
                     <td><?php echo "$objAtual->potencia";?></td>
-                    <td class="altern">Transmissão</td>
+                    <td>Transmissão</td>
                     <td><?php echo "$objAtual->transmissao";?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Quantidade de Lugares</td>
+                    <td>Quantidade de Lugares</td>
                     <td><?php echo "$objAtual->qntLugares";?></td>
-                    <td class="altern">Porta-Malas</td>
+                    <td>Porta-Malas</td>
                     <td><?php echo "$objAtual->portaMalas";?></td>
                 </tr>
-                <tr>
-                    <td class="altern">Ano</td>
+                <tr class="title">
+                    <td>Ano</td>
                     <td><?php echo "$objAtual->ano";?></td>
-                    <td class="altern">Altura</td>
+                    <td>Altura</td>
                     <td><?php echo "$objAtual->altura";?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Faixa de Preço</td>
+                    <td>Faixa de Preço</td>
                     <td><?php echo "$objAtual->faixaPreco";?></td>
-                    <td class="altern">Largura</td>
+                    <td>Largura</td>
                     <td><?php echo "$objAtual->largura";?></td>
                 </tr>
-                <tr>
-                    <td class="altern">Consumo na Estrada</td>
+                <tr class="title">
+                    <td>Consumo na Estrada</td>
                     <td><?php echo "$objAtual->consumoEstrada";?></td>
-                    <td class="altern">Comprimento</td>
+                    <td>Comprimento</td>
                     <td><?php echo "$objAtual->comprimento";?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Consumo na Cidade</td>
+                    <td>Consumo na Cidade</td>
                     <td><?php echo "$objAtual->consumoCidade";?></td>
-                    <td class="altern">0 a 100 km/h</td>
+                    <td>0 a 100 km/h</td>
                     <td><?php echo "$objAtual->zeroACem";?></td>
                 </tr>
-                <tr>
-                    <td class="altern">Propulsão</td>
+                <tr class="title">
+                    <td>Propulsão</td>
                     <td><?php echo "$objAtual->propulsao";?></td>
-                    <td class="altern">Tração</td>
+                    <td>Tração</td>
                     <td><?php echo "$objAtual->tracao";?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Torque</td>
+                    <td>Torque</td>
                     <td><?php echo "$objAtual->torque";?></td>
-                    <td class="altern">Importado</td>
+                    <td>Importado</td>
                     <td><?php if ("$objAtual->importado" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
-                    <td class="altern">Câmera de Ré</td>
+                <tr class="title">
+                    <td>Câmera de Ré</td>
                     <td><?php if ("$objAtual->cameraRe" == 1){echo "Sim";} else {echo "Não";}?></td>
-                    <td class="altern">Sensor de Estacionamento</td>
+                    <td>Sensor de Estacionamento</td>
                     <td><?php if ("$objAtual->sensorEstacionar" == 1){echo "Sim";} else {echo "Não";}?></td>
-                <tr>
-                    <td class="altern">Teto Solar</td>
-                    <td><?php if ("$objAtual->tetoSolar" == 1){echo "Sim";} else {echo "Não";}?></td>
-                    <td class="altern">Chave Presencial</td>
-                    <td><?php if ("$objAtual->chavePresencial" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
                 <tr>
-                    <td class="altern">Farol de Neblina</td>
+                    <td>Teto Solar</td>
+                    <td><?php if ("$objAtual->tetoSolar" == 1){echo "Sim";} else {echo "Não";}?></td>
+                    <td>Chave Presencial</td>
+                    <td><?php if ("$objAtual->chavePresencial" == 1){echo "Sim";} else {echo "Não";}?></td>
+                </tr>
+                <tr class="title">
+                    <td>Farol de Neblina</td>
                     <td><?php if ("$objAtual->farolNeblina" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
             </table>
@@ -184,7 +191,6 @@
 
     <?php   
         }
-
     ?>
     <footer>
         <h5>Todos os direitos reservados</h5>

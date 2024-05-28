@@ -43,7 +43,7 @@ CREATE TABLE Carro (
 INSERT INTO Carro (categoria, marca, modelo, motor, potencia, qntLugares, ano, faixaPreco, consumoEstrada, consumoCidade, qntAirbags, estepe, notaTesteSeguranca, appleAndroid, transmissao, portaMalas, altura, largura, 
 comprimento, zeroACem, propulsao, tracao, torque, importado, cameraRe, sensorEstacionar, tetoSolar, chavePresencial, farolNeblina, imagem)
 VALUES
-('SUV', 'Toyota', 'RAV4', '2.5L 4-Cilindros', 203, 5, 2024, 80000.00, 5, 7.8, 8, TRUE, 10.2, TRUE, 'Automática', 580, 1.70, 1.85, 4.60, 8.1, 'Gasolina', 'Integral', 224, FALSE, TRUE, TRUE, TRUE, TRUE, 'images/carros/rav4.png'),
+('SUV', 'Toyota', 'RAV4', '2.5L 4-Cilindros', 203, 5, 2024, 80000.00, 5, 7.8, 8, TRUE, 10.2, TRUE, 'Automática', 580, 1.70, 1.85, 4.60, 8.1, 'Gasolina', 'Integral', 224, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/rav4.png'),
 ('Hatchback', 'Volkswagen', 'Golf GTI', '2.0L 4-Cilindros Turbo', 241, 5, 2024, 90000.00, 5, 7.2, 6, FALSE, 9.8, TRUE, 'Automática', 380, 1.45, 1.80, 4.25, 6.4, 'Gasolina', 'Dianteira', 350, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/golfgti.png'),
 ('Sedan', 'Honda', 'Civic', '2.0L 4-Cilindros', 158, 5, 2024, 75000.00, 5, 6.5, 6, TRUE, 8.5, TRUE, 'Automática', 420, 1.40, 1.80, 4.70, 9.1, 'Gasolina', 'Dianteira', 187, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/civic.png'),
 ('SUV', 'Mazda', 'CX-5', '2.5L 4-Cilindros Turbo', 250, 5, 2024, 85000.00, 5, 8.0, 6, TRUE, 11.5, TRUE, 'Automática', 460, 1.65, 1.85, 4.60, 7.3, 'Gasolina', 'Integral', 310, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/CX-5.png'),
@@ -57,7 +57,7 @@ VALUES
 ('Hatchback', 'Peugeot', '208 GT', '1.2L 3-Cilindros Turbo', 130, 5, 2024, 68000.00, 4.5, 6.5, 6, FALSE, 7.9, TRUE, 'Automática', 311, 1.43, 1.74, 4.06, 8.7, 'Gasolina', 'Dianteira', 230, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/208gt.png'),
 ('Sedan', 'Audi', 'A4', '2.0L 4-Cilindros Turbo', 188, 5, 2024, 110000.00, 5.5, 7.5, 8, TRUE, 10.0, TRUE, 'Automática', 480, 1.43, 1.84, 4.73, 7.1, 'Gasolina', 'Integral', 320, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/a4.png'),
 ('SUV', 'BMW', 'X3', '2.0L 4-Cilindros Turbo', 248, 5, 2024, 120000.00, 6.2, 8.6, 8, TRUE, 9.5, TRUE, 'Automática', 550, 1.68, 1.89, 4.71, 6.3, 'Gasolina', 'Integral', 350, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/x3.png'),
-('Cupê', 'Mercedes-Benz', 'C-Class', '3.0L V6 Turbo', 385, 4, 2024, 130000.00, 5.0, 8.2, 8, TRUE, 12.0, TRUE, 'Automática', 360, 1.40, 1.81, 4.69, 4.7, 'Gasolina', 'Traseira', 520, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/cclss.png'),
+('Cupê', 'Mercedes-Benz', 'C-Class', '3.0L V6 Turbo', 385, 4, 2024, 130000.00, 5.0, 8.2, 8, TRUE, 12.0, TRUE, 'Automática', 360, 1.40, 1.81, 4.69, 4.7, 'Gasolina', 'Traseira', 520, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/cclass.png'),
 ('SUV', 'Hyundai', 'Tucson', '2.0L 4-Cilindros', 164, 5, 2024, 75000.00, 5.5, 7.0, 6, TRUE, 8.7, TRUE, 'Automática', 540, 1.65, 1.85, 4.48, 9.3, 'Gasolina', 'Dianteira', 203, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/tucson.png'),
 ('Sedan', 'Kia', 'Optima', '2.4L 4-Cilindros', 185, 5, 2024, 72000.00, 6.0, 7.8, 6, TRUE, 8.3, TRUE, 'Automática', 450, 1.46, 1.86, 4.85, 7.8, 'Gasolina', 'Dianteira', 235, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/optima.png'),
 ('Cupê', 'Alfa Romeo', 'Giulia', '2.0L 4-Cilindros Turbo', 280, 5, 2024, 100000.00, 6.5, 9.0, 6, TRUE, 10.8, TRUE, 'Automática', 480, 1.41, 1.87, 4.64, 5.7, 'Gasolina', 'Traseira', 306, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 'images/carros/giulia.png'),
@@ -157,6 +157,6 @@ SELECT id_usuario from usuario where email = 'icarolk@gmail.com';
   USE autochoice;
   
   SELECT * FROM usuario;
-  select * from carro;
+  SELECT * FROM carro;
   SELECT * FROM Favoritos;
   

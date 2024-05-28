@@ -121,6 +121,14 @@
                OR imagem LIKE '%$cu%'");
         }
 
+        $email = $_SESSION['email'];
+        $id_usuario = $banco->query("select * from usuario where email = '$email';")->fetch_object()->id_usuario;
+    
+        $favoritos = $banco->query("Select * FROM favoritos AS f
+        INNER JOIN usuario AS u ON f.id_usuario = u.id_usuario
+        INNER JOIN carro AS c ON f.id_carro = c.id_carro
+        WHERE u.id_usuario = $id_usuario;");
+
         $qtd = $resultado->num_rows; 
         
         if($qtd == 0){
@@ -139,12 +147,11 @@
                         echo "<a href='excluir.php?modelo=$objAtual->modelo' onclick='return confirmDelete(\"excluir.php?modelo=$objAtual->modelo\")' class='closeee'><span class='material-symbols-outlined'>close</span></a>";
                     }
 
-                    if(5 > 0) {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 
-                        'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
+                    
+                    if($favoritos->num_rows == 0) {
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #808080; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     } else {
-                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #ffc000; font-variation-settings: 'FILL' 1    , 'wght' 400, 
-                        'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
+                        echo "<a href='favoritar.php?id_carro=$objAtual->id_carro' style='margin-left: -100px;'><span class='material-symbols-outlined' style='color: #ffc000; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;'>favorite</span></a>";
                     }
                     
                     
