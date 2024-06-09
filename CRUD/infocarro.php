@@ -98,91 +98,91 @@
         <div class="tabelaInfo">
             <table>
                 <tr class="title">
-                    <td>Categoria</td>
+                    <td style="font-weight: 900;">Categoria</td>
                     <td><?php echo "$objAtual->categoria";?></td>
-                    <td>Quantidade de Airbags</td>
+                    <td style="font-weight: 900;">Quantidade de Airbags</td>
                     <td><?php echo "$objAtual->qntAirbags";?></td>  
                 </tr>
                 <tr>
-                    <td>Marca</td>
+                    <td style="font-weight: 900;">Marca</td>
                     <td><?php echo "$objAtual->marca";?></td>
-                    <td>Estepe</td>
+                    <td style="font-weight: 900;">Estepe</td>
                     <td><?php echo "$objAtual->estepe";?></td>
                 </tr>
                 <tr class="title">
-                    <td>Modelo</td>
+                    <td style="font-weight: 900;">Modelo</td>
                     <td><?php echo "$objAtual->modelo";?></td>
-                    <td>Nota no Teste de Segurança</td>
+                    <td style="font-weight: 900;">Nota no Teste de Segurança</td>
                     <td><?php echo "$objAtual->notaTesteSeguranca";?></td>
                 </tr>
                 <tr>
-                    <td>Motor</td>
+                    <td style="font-weight: 900;">Motor</td>
                     <td><?php echo "$objAtual->motor";?></td>
-                    <td>Compatibilidade Apple/Android</td>
+                    <td style="font-weight: 900;">Compatibilidade Apple/Android</td>
                     <td><?php if ("$objAtual->appleAndroid" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
                 <tr class="title">
-                    <td>Potência</td>
+                    <td style="font-weight: 900;">Potência</td>
                     <td><?php echo "$objAtual->potencia";?></td>
-                    <td>Transmissão</td>
+                    <td style="font-weight: 900;">Transmissão</td>
                     <td><?php echo "$objAtual->transmissao";?></td>
                 </tr>
                 <tr>
-                    <td>Quantidade de Lugares</td>
+                    <td style="font-weight: 900;">Quantidade de Lugares</td>
                     <td><?php echo "$objAtual->qntLugares";?></td>
-                    <td>Porta-Malas</td>
+                    <td style="font-weight: 900;">Porta-Malas</td>
                     <td><?php echo "$objAtual->portaMalas";?></td>
                 </tr>
                 <tr class="title">
-                    <td>Ano</td>
+                    <td style="font-weight: 900;">Ano</td>
                     <td><?php echo "$objAtual->ano";?></td>
-                    <td>Altura</td>
+                    <td style="font-weight: 900;">Altura</td>
                     <td><?php echo "$objAtual->altura";?></td>
                 </tr>
                 <tr>
-                    <td>Faixa de Preço</td>
+                    <td style="font-weight: 900;">Faixa de Preço</td>
                     <td><?php echo "$objAtual->faixaPreco";?></td>
-                    <td>Largura</td>
+                    <td style="font-weight: 900;">Largura</td>
                     <td><?php echo "$objAtual->largura";?></td>
                 </tr>
                 <tr class="title">
-                    <td>Consumo na Estrada</td>
+                    <td style="font-weight: 900;">Consumo na Estrada</td>
                     <td><?php echo "$objAtual->consumoEstrada";?></td>
-                    <td>Comprimento</td>
+                    <td style="font-weight: 900;">Comprimento</td>
                     <td><?php echo "$objAtual->comprimento";?></td>
                 </tr>
                 <tr>
-                    <td>Consumo na Cidade</td>
+                    <td style="font-weight: 900;">Consumo na Cidade</td>
                     <td><?php echo "$objAtual->consumoCidade";?></td>
-                    <td>0 a 100 km/h</td>
+                    <td style="font-weight: 900;">0 a 100 km/h</td>
                     <td><?php echo "$objAtual->zeroACem";?></td>
                 </tr>
                 <tr class="title">
-                    <td>Propulsão</td>
+                    <td style="font-weight: 900;">Propulsão</td>
                     <td><?php echo "$objAtual->propulsao";?></td>
-                    <td>Tração</td>
+                    <td style="font-weight: 900;">Tração</td>
                     <td><?php echo "$objAtual->tracao";?></td>
                 </tr>
                 <tr>
-                    <td>Torque</td>
+                    <td style="font-weight: 900;">Torque</td>
                     <td><?php echo "$objAtual->torque";?></td>
-                    <td>Importado</td>
+                    <td style="font-weight: 900;">Importado</td>
                     <td><?php if ("$objAtual->importado" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
                 <tr class="title">
-                    <td>Câmera de Ré</td>
+                    <td style="font-weight: 900;">Câmera de Ré</td>
                     <td><?php if ("$objAtual->cameraRe" == 1){echo "Sim";} else {echo "Não";}?></td>
-                    <td>Sensor de Estacionamento</td>
+                    <td style="font-weight: 900;">Sensor de Estacionamento</td>
                     <td><?php if ("$objAtual->sensorEstacionar" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
                 <tr>
-                    <td>Teto Solar</td>
+                    <td style="font-weight: 900;">Teto Solar</td>
                     <td><?php if ("$objAtual->tetoSolar" == 1){echo "Sim";} else {echo "Não";}?></td>
-                    <td>Chave Presencial</td>
+                    <td style="font-weight: 900;">Chave Presencial</td>
                     <td><?php if ("$objAtual->chavePresencial" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
                 <tr class="title">
-                    <td>Farol de Neblina</td>
+                    <td style="font-weight: 900;">Farol de Neblina</td>
                     <td><?php if ("$objAtual->farolNeblina" == 1){echo "Sim";} else {echo "Não";}?></td>
                 </tr>
             </table>
