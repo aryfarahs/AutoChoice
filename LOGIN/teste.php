@@ -2,7 +2,7 @@
 // Verifica se o formulário de login foi enviado
 if(isset($_POST['login'])) {
     // Conexão com o banco de dados
-    $conexao = mysqli_connect("127.0.0.1:3306", "root", "", "autochoice");
+    $conexao = mysqli_connect("127.0.0.1:3307", "root", "PUC@1234", "autochoice");
 
     // Verifica se a conexão foi estabelecida com sucesso
     if($conexao === false) {
